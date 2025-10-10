@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">بسّط حياتك المالية باستخدام أدوات ذكية لإدارة المال.</string>
+    <string name="note_continue2">تصوّر نفقاتك ودخلك من خلال تقارير واضحة.</string>
+    <string name="note_continue3">ابقَ على اطلاع بميزانيتك وزد مدخراتك.</string>
+    <string name="note_continue4">ضع أهدافًا، وتتبع تقدمك، وابنِ عادات مالية جيدة.</string>
+
+    <string name="note_guide1">اضغط على "الميزانية" لإدارة إنفاقك</string>
+    <string name="note_guide2">شاهد رصيدك المتبقي بنظرة سريعة</string>
+    <string name="note_guide3">انتقل بين الميزانيات بسهولة</string>
+    <string name="note_guide4">حلّل الإنفاق وابقَ على المسار الصحيح</string>
+
+    <string name="budget_detail">تفاصيل الميزانية</string>
+    <string name="add_budget">إضافة ميزانية</string>
+    <string name="next">التالي</string>
+    <string name="currency_unit">وحدة العملة</string>
+    <string name="search">بحث</string>
+    <string name="add">إضافة</string>
+    <string name="expense">مصروف</string>
+    <string name="income">دخل</string>
+    <string name="loan">قرض</string>
+    <string name="amount">المبلغ</string>
+    <string name="category">الفئة</string>
+    <string name="budget">الميزانية</string>
+    <string name="note">ملاحظة</string>
+    <string name="add_a_description">أضف وصفًا</string>
+    <string name="select_date">اختر التاريخ</string>
+    <string name="date_time">التاريخ والوقت</string>
+    <string name="select_time">اختر الوقت</string>
+    <string name="interest">فائدة</string>
+    <string name="please_select_at_least_2_options_to_continue">*يرجى اختيار خيارين على الأقل للمتابعة.</string>
+    <string name="total">المجموع</string>
+    <string name="please_select_language_to_continue">يرجى اختيار اللغة للمتابعة</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="budget_name">اسم الميزانية</string>
+    <string name="transactions">المعاملات</string>
+    <string name="date">التاريخ</string>
+    <string name="delete_transaction">حذف المعاملة</string>
+    <string name="statistic">الإحصائيات</string>
+    <string name="home">الرئيسية</string>
+    <string name="settings">الإعدادات</string>
+    <string name="add_your_first_transaction">أضف معاملتك الأولى.</string>
+    <string name="total_balance">الرصيد الإجمالي</string>
+    <string name="month">شهر</string>
+    <string name="borrow">اقتراض</string>
+    <string name="balance">الرصيد</string>
+    <string name="edit">تعديل</string>
+    <string name="currency">العملة</string>
+    <string name="language">اللغة</string>
+    <string name="share">مشاركة</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="rating">التقييم</string>
+    <string name="please_add_transaction_first">يرجى إضافة معاملة أولاً</string>
+
+
+</resources>

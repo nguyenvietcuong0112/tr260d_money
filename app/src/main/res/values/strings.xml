@@ -1,0 +1,192 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">Take Charge of Your Money</string>
+    <string name="note_continue2">Know Where It Goes</string>
+    <string name="note_continue3">Plan, Save, Relax</string>
+    <string name="note_continue4">Reach Your Money Goals</string>
+    <string name="not_much_more_useful_nthan_the_defaults">Not much more useful than the defaults</string>
+    <string name="unresponsive_or_laggy">Unresponsive or\nLaggy</string>
+    <string name="note_guide1">Tap ‘Budget’ to manage your spending</string>
+    <string name="note_guide2">See your remaining balance at a glance</string>
+    <string name="note_guide3">Switch between budgets effortlessly</string>
+    <string name="note_guide4">Analyze spending and stay on track</string>
+    <string name="budget_detail">Budget Detail</string>
+    <string name="add_budget">Add Budget</string>
+    <string name="next">Next</string>
+    <string name="currency_unit">Currency unit</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
+    <string name="expense">Expense</string>
+    <string name="income">Income</string>
+    <string name="loan">Loan</string>
+    <string name="amount">Amount</string>
+    <string name="category">Category</string>
+    <string name="budget">Budget</string>
+    <string name="note">Note</string>
+    <string name="add_a_description">Add a description</string>
+    <string name="select_date">Select date</string>
+    <string name="date_time">Date time</string>
+    <string name="select_time">Select time</string>
+    <string name="interest">Interest</string>
+    <string name="please_select_at_least_2_options_to_continue">*Please select at least 2 options to continue.</string>
+    <string name="total">Total</string>
+    <string name="please_select_language_to_continue">Please select language to continue</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="budget_name">Budget Name</string>
+    <string name="transactions">Transactions</string>
+    <string name="date">Date</string>
+    <string name="delete_transaction">Delete Transaction</string>
+    <string name="statistic">Statistic</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="add_your_first_transaction">Add your first transaction.</string>
+    <string name="total_balance">Total balance</string>
+    <string name="month">Month</string>
+    <string name="borrow">Borrow</string>
+    <string name="balance">Balance</string>
+    <string name="edit">Edit</string>
+    <string name="currency">Currency</string>
+    <string name="language">Language</string>
+    <string name="share">Share</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="rating">Rating</string>
+    <string name="please_add_transaction_first">Please add transaction first</string>
+
+
+    <string name="mexico">Mexico(México)</string>
+    <string name="poland">Poland (Polska)</string>
+    <string name="turkey">Turkey (Türkiye)</string>
+    <string name="iraq">Iraq (العراق)</string>
+    <string name="ukraine">Ukraine (Україна)</string>
+    <string name="argentina">Argentina (Argentina)</string>
+    <string name="kazakhstan">Kazakhstan (Қазақстан)</string>
+    <string name="arabic">Arabic(العربية)</string>
+    <string name="french">French(Français)</string>
+    <string name="germany">German(Deutsch)</string>
+    <string name="hindi">Hindi(हिन्दी)</string>
+    <string name="indonesia">Indonesia(Bahasa Indonesia)</string>
+    <string name="japan">Japanese(日本語 )</string>
+    <string name="korea">Korea(한국어)</string>
+    <string name="portuguese">Portuguese(Português)</string>
+    <string name="russia">Russia(Pусский)</string>
+    <string name="spanish">Spanish(Español)</string>
+    <string name="urdu">Urdu(اُردُو)</string>
+    <string name="english">English</string>
+    <string name="english_us">English (US)</string>
+    <string name="english_uk">English (UK)</string>
+    <string name="english_canada">English (Canada)</string>
+    <string name="english_south_africa">English (South Africa)</string>
+    <string name="bengali">Bengali (বাংলা)</string>
+    <string name="marathi">Marathi (मराठी)</string>
+    <string name="telugu">Telugu (తెలుగు)</string>
+    <string name="tamil">Tamil (தமிழ்)</string>
+    <string name="kannada">Kannada (ಕನ್ನಡ)</string>
+    <string name="odia">Odia (ଓଡ଼ିଆ)</string>
+    <string name="malayalam">Malayalam (മലയാളം)</string>
+    <string name="portuguese_brazil">Portuguese (Brazil)</string>
+    <string name="portuguese_europeu">Portuguese (Europe)</string>
+    <string name="portuguese_angola">Portuguese (Angola)</string>
+    <string name="portuguese_mozambique">Portuguese (Mozambique)</string>
+    <string name="india">India (भारत)</string>
+
+    <string name="open">Open</string>
+
+    <string-array name="special_titles_v2">
+        <item>🔥 Too Hot</item>
+        <item>👀 Hidden Photos</item>
+        <item>⚡ Irresistible Pics</item>
+        <item>🔓 Secrets Exposed</item>
+        <item>😏 Private Side</item>
+        <item>😮 Unbelievable Looks</item>
+        <item>❤️‍🔥 Intimate Shots</item>
+        <item>🌙 After Dark</item>
+        <item>✨ Pure Moments</item>
+        <item>🚫 Rule Breakers</item>
+        <item>📸 Photo Leak</item>
+        <item>🔥 Unreleased Shots</item>
+        <item>😱 Caught On Cam</item>
+        <item>👀 Hidden Gallery</item>
+        <item>🚨 Viral Scandal</item>
+    </string-array>
+
+
+    <string-array name="special_messages_v2">
+        <item>Open now before this gallery disappears.</item>
+        <item>Tap to unlock the full set inside the app.</item>
+        <item>Swipe through the new file if you dare.</item>
+        <item>View the uncensored shots right now.</item>
+        <item>Check the document for the unfiltered truth.</item>
+        <item>Tap to see the most daring collection yet.</item>
+        <item>Don’t miss the exclusive file inside your app.</item>
+        <item>Open to discover the hidden gallery.</item>
+        <item>Explore the raw photos in your latest file.</item>
+        <item>Tap now to see what’s causing the buzz.</item>
+        <item>Tap to view the photo everyone is talking about!</item>
+        <item>Exclusive pics revealed — don’t miss out!</item>
+        <item>One image is shocking the internet. See it now!</item>
+        <item>Secret shots finally uncovered. Open to view!</item>
+        <item>This scandalous picture is going viral — watch it first!</item>
+    </string-array>
+
+
+    <string-array name="special_titles_news">
+        <item>📰 Breaking News</item>
+        <item>⚡ Headline Shock</item>
+        <item>🚨 Major Event</item>
+        <item>🌦️ Weather Alert</item>
+        <item>🌪️ Storm Warning</item>
+        <item>☔ Rain Watch</item>
+        <item>🗞️ Daily Buzz</item>
+        <item>🌤️ Temp Drop</item>
+        <item>🔥 Heatwave Alert</item>
+        <item>❄️ Cold Front</item>
+        <item>🌧️ Rain Update</item>
+        <item>⚠️ Climate Alert</item>
+        <item>🏆 Game Changer</item>
+        <item>⚽ Shocking Win</item>
+        <item>🔥 Sports Blast</item>
+    </string-array>
+
+    <string-array name="special_messages_news">
+        <item>Tap to see the breaking story that’s dominating headlines this morning.</item>
+        <item>Don’t miss today’s shocking update — everyone’s talking about it.</item>
+        <item>Breaking alert: a major event is unfolding right now. Open for details.</item>
+        <item>Tap to check urgent weather changes happening in your area.</item>
+        <item>Severe conditions detected — open to see safety alerts and forecasts.</item>
+        <item>Weather turning fast: view the latest radar and stay prepared.</item>
+        <item>Breaking alert: see today’s top story before everyone else does.</item>
+        <item>Temperature update: check how today’s drastic change affects you.</item>
+        <item>Extreme heat alert — stay cool and informed with the latest updates.</item>
+        <item>Cold front incoming: open for forecast and preparation tips.</item>
+        <item>Rainfall expected soon — check full report and timing now.</item>
+        <item>Tap for real-time climate alerts and morning weather details.</item>
+        <item>Last night’s match shocked everyone — tap for full highlights.</item>
+        <item>Breaking sports update: see how the game was turned around.</item>
+        <item>Unbelievable victory — open for today’s top sports moment.</item>
+    </string-array>
+    <string name="title_screen_shoot_done">Screen shoot successfully!</string>
+    <string name="body_screen_shoot_done">Open app to see image</string>
+    <string name="title_dowload_done">File loaded successfully!</string>
+    <string name="body_dowload_done">Recently loaded file: </string>
+    <string name="title_out_done">Still working on your Document?</string>
+    <string name="body_out_done">Tap to continue where you left off.</string>
+    <string name="open_now">Open Now!</string>
+    <string name="continued">Continue</string>
+</resources>

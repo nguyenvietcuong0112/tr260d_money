@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">スマートマネーツールであなたの金融生活を簡単にしましょう。</string>
+    <string name="note_continue2">明確なレポートで支出と収入を可視化します。</string>
+    <string name="note_continue3">予算を把握し、貯蓄を増やしましょう。</string>
+    <string name="note_continue4">目標を設定し、進捗を追跡し、金融習慣を築きましょう。</string>
+
+    <string name="note_guide1">「予算」をタップして支出を管理します</string>
+    <string name="note_guide2">残高を一目で確認できます</string>
+    <string name="note_guide3">予算間を簡単に切り替えられます</string>
+    <string name="note_guide4">支出を分析し、軌道に乗りましょう</string>
+
+    <string name="budget_detail">予算の詳細</string>
+    <string name="add_budget">予算を追加</string>
+    <string name="next">次へ</string>
+    <string name="currency_unit">通貨単位</string>
+    <string name="search">検索</string>
+    <string name="add">追加</string>
+    <string name="expense">支出</string>
+    <string name="income">収入</string>
+    <string name="loan">ローン</string>
+    <string name="amount">金額</string>
+    <string name="category">カテゴリ</string>
+    <string name="budget">予算</string>
+    <string name="note">メモ</string>
+    <string name="add_a_description">説明を追加</string>
+    <string name="select_date">日付を選択</string>
+    <string name="date_time">日時</string>
+    <string name="select_time">時間を選択</string>
+    <string name="interest">利息</string>
+    <string name="please_select_at_least_2_options_to_continue">*続行するには少なくとも2つのオプションを選択してください。</string>
+    <string name="total">合計</string>
+    <string name="please_select_language_to_continue">続行するには言語を選択してください</string>
+    <string name="save">保存</string>
+    <string name="cancel">キャンセル</string>
+    <string name="budget_name">予算名</string>
+    <string name="transactions">取引</string>
+    <string name="date">日付</string>
+    <string name="delete_transaction">取引を削除</string>
+    <string name="statistic">統計</string>
+    <string name="home">ホーム</string>
+    <string name="settings">設定</string>
+    <string name="add_your_first_transaction">最初の取引を追加してください。</string>
+    <string name="total_balance">総残高</string>
+    <string name="month">月</string>
+    <string name="borrow">借入</string>
+    <string name="balance">残高</string>
+    <string name="edit">編集</string>
+    <string name="currency">通貨</string>
+    <string name="language">言語</string>
+    <string name="share">共有</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="rating">評価</string>
+    <string name="please_add_transaction_first">まずは取引を追加してください</string>
+
+
+</resources>

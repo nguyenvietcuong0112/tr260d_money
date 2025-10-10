@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">Ақылды қаржы құралдарымен қаржылық өміріңізді жеңілдетіңіз.</string>
+    <string name="note_continue2">Шығындарыңыз бен кірістеріңізді айқын есептер арқылы көріңіз.</string>
+    <string name="note_continue3">Бюджетіңізді бақылауда ұстаңыз және жинақтарыңызды көбейтіңіз.</string>
+    <string name="note_continue4">Мақсаттар қойыңыз, ілгерілеуді қадағалаңыз және қаржылық дағдыларды дамытыңыз.</string>
+
+    <string name="note_guide1">Шығындарыңызды басқару үшін «Бюджет» батырмасын басыңыз</string>
+    <string name="note_guide2">Қалған балансңызды бір қарағанда көріңіз</string>
+    <string name="note_guide3">Бюджеттер арасында оңай ауысыңыз</string>
+    <string name="note_guide4">Шығындарды талдаңыз және жоспар бойынша жүріңіз</string>
+
+    <string name="budget_detail">Бюджет туралы мәлімет</string>
+    <string name="add_budget">Бюджет қосу</string>
+    <string name="next">Келесі</string>
+    <string name="currency_unit">Валюта бірлігі</string>
+    <string name="search">Іздеу</string>
+    <string name="add">Қосу</string>
+    <string name="expense">Шығын</string>
+    <string name="income">Кіріс</string>
+    <string name="loan">Несие</string>
+    <string name="amount">Сома</string>
+    <string name="category">Санат</string>
+    <string name="budget">Бюджет</string>
+    <string name="note">Ескертпе</string>
+    <string name="add_a_description">Сипаттама қосу</string>
+    <string name="select_date">Күнді таңдаңыз</string>
+    <string name="date_time">Күн мен уақыт</string>
+    <string name="select_time">Уақытты таңдаңыз</string>
+    <string name="interest">Пайыз</string>
+    <string name="please_select_at_least_2_options_to_continue">*Жалғастыру үшін кемінде 2 нұсқаны таңдаңыз.</string>
+    <string name="total">Барлығы</string>
+    <string name="please_select_language_to_continue">Жалғастыру үшін тілді таңдаңыз</string>
+    <string name="save">Сақтау</string>
+    <string name="cancel">Болдырмау</string>
+    <string name="budget_name">Бюджет атауы</string>
+    <string name="transactions">Транзакциялар</string>
+    <string name="date">Күн</string>
+    <string name="delete_transaction">Транзакцияны жою</string>
+    <string name="statistic">Статистика</string>
+    <string name="home">Басты бет</string>
+    <string name="settings">Баптаулар</string>
+    <string name="add_your_first_transaction">Бірінші транзакцияңызды қосыңыз.</string>
+    <string name="total_balance">Жалпы баланс</string>
+    <string name="month">Ай</string>
+    <string name="borrow">Қарыз алу</string>
+    <string name="balance">Баланс</string>
+    <string name="edit">Өңдеу</string>
+    <string name="currency">Валюта</string>
+    <string name="language">Тіл</string>
+    <string name="share">Бөлісу</string>
+    <string name="privacy_policy">Құпиялылық саясаты</string>
+    <string name="rating">Бағалау</string>
+    <string name="please_add_transaction_first">Алдымен транзакция қосыңыз</string>
+
+
+</resources>

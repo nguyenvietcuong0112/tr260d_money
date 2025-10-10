@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:color="@color/btn_nav"
+        android:checked="true" />
+    <item
+        android:id="@+id/nav_statistic"
+        android:icon="@drawable/ic_statistic"
+        android:color="@color/btn_nav"
+        android:title="Statistic" />
+    <item
+        android:id="@+id/nav_budget"
+        android:icon="@drawable/ic_budget"
+        android:color="@color/btn_nav"
+        android:title="Budget" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:color="@color/btn_nav"
+        android:title="Settings" />
+</menu>

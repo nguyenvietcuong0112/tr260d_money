@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">Упростите вашу финансовую жизнь с помощью умных инструментов управления деньгами.</string>
+    <string name="note_continue2">Визуализируйте свои расходы и доходы с помощью понятных отчетов.</string>
+    <string name="note_continue3">Следите за бюджетом и увеличивайте свои сбережения.</string>
+    <string name="note_continue4">Устанавливайте цели, отслеживайте прогресс и формируйте полезные финансовые привычки.</string>
+
+    <string name="note_guide1">Нажмите "Бюджет" для управления расходами</string>
+    <string name="note_guide2">Просматривайте остаток одним взглядом</string>
+    <string name="note_guide3">Легко переключайтесь между бюджетами</string>
+    <string name="note_guide4">Анализируйте расходы и держитесь курса</string>
+
+    <string name="budget_detail">Детали бюджета</string>
+    <string name="add_budget">Добавить бюджет</string>
+    <string name="next">Далее</string>
+    <string name="currency_unit">Валюта</string>
+    <string name="search">Поиск</string>
+    <string name="add">Добавить</string>
+    <string name="expense">Расход</string>
+    <string name="income">Доход</string>
+    <string name="loan">Заем</string>
+    <string name="amount">Сумма</string>
+    <string name="category">Категория</string>
+    <string name="budget">Бюджет</string>
+    <string name="note">Заметка</string>
+    <string name="add_a_description">Добавить описание</string>
+    <string name="select_date">Выберите дату</string>
+    <string name="date_time">Дата и время</string>
+    <string name="select_time">Выберите время</string>
+    <string name="interest">Процент</string>
+    <string name="please_select_at_least_2_options_to_continue">*Пожалуйста, выберите как минимум 2 варианта для продолжения.</string>
+    <string name="total">Итого</string>
+    <string name="please_select_language_to_continue">Пожалуйста, выберите язык для продолжения</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="budget_name">Название бюджета</string>
+    <string name="transactions">Транзакции</string>
+    <string name="date">Дата</string>
+    <string name="delete_transaction">Удалить транзакцию</string>
+    <string name="statistic">Статистика</string>
+    <string name="home">Главная</string>
+    <string name="settings">Настройки</string>
+    <string name="add_your_first_transaction">Добавьте вашу первую транзакцию.</string>
+    <string name="total_balance">Общий баланс</string>
+    <string name="month">Месяц</string>
+    <string name="borrow">Занять</string>
+    <string name="balance">Баланс</string>
+    <string name="edit">Редактировать</string>
+    <string name="currency">Валюта</string>
+    <string name="language">Язык</string>
+    <string name="share">Поделиться</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="rating">Рейтинг</string>
+    <string name="please_add_transaction_first">Пожалуйста, сначала добавьте транзакцию</string>
+
+
+</resources>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">Akıllı para araçlarıyla finansal hayatınızı basitleştirin.</string>
+    <string name="note_continue2">Harcamalarınızı ve gelirlerinizi net raporlarla görselleştirin.</string>
+    <string name="note_continue3">Bütçenizi takip edin ve birikimlerinizi artırın.</string>
+    <string name="note_continue4">Hedefler belirleyin, ilerlemenizi takip edin ve iyi finansal alışkanlıklar geliştirin.</string>
+
+    <string name="note_guide1">Harcamalarınızı yönetmek için "Bütçe"ye dokunun</string>
+    <string name="note_guide2">Bakiyenizi hızlıca görüntüleyin</string>
+    <string name="note_guide3">Bütçeler arasında kolayca geçiş yapın</string>
+    <string name="note_guide4">Harcamalarınızı analiz edin ve doğru yolda kalın</string>
+
+    <string name="budget_detail">Bütçe Detayları</string>
+    <string name="add_budget">Bütçe Ekle</string>
+    <string name="next">İleri</string>
+    <string name="currency_unit">Para Birimi</string>
+    <string name="search">Ara</string>
+    <string name="add">Ekle</string>
+    <string name="expense">Gider</string>
+    <string name="income">Gelir</string>
+    <string name="loan">Kredi</string>
+    <string name="amount">Tutar</string>
+    <string name="category">Kategori</string>
+    <string name="budget">Bütçe</string>
+    <string name="note">Not</string>
+    <string name="add_a_description">Açıklama Ekle</string>
+    <string name="select_date">Tarih Seç</string>
+    <string name="date_time">Tarih ve Saat</string>
+    <string name="select_time">Saat Seç</string>
+    <string name="interest">Faiz</string>
+    <string name="please_select_at_least_2_options_to_continue">*Devam etmek için en az 2 seçenek seçiniz.</string>
+    <string name="total">Toplam</string>
+    <string name="please_select_language_to_continue">Devam etmek için lütfen dil seçiniz</string>
+    <string name="save">Kaydet</string>
+    <string name="cancel">İptal</string>
+    <string name="budget_name">Bütçe Adı</string>
+    <string name="transactions">İşlemler</string>
+    <string name="date">Tarih</string>
+    <string name="delete_transaction">İşlemi Sil</string>
+    <string name="statistic">İstatistik</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="settings">Ayarlar</string>
+    <string name="add_your_first_transaction">İlk işleminizi ekleyin.</string>
+    <string name="total_balance">Toplam Bakiye</string>
+    <string name="month">Ay</string>
+    <string name="borrow">Borç Al</string>
+    <string name="balance">Bakiye</string>
+    <string name="edit">Düzenle</string>
+    <string name="currency">Para Birimi</string>
+    <string name="language">Dil</string>
+    <string name="share">Paylaş</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="rating">Değerlendirme</string>
+    <string name="please_add_transaction_first">Lütfen önce işlem ekleyin</string>
+
+
+</resources>

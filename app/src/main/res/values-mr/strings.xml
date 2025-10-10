@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">स्मार्ट मनी साधनांसह तुमचे आर्थिक जीवन सोपे करा.</string>
+    <string name="note_continue2">स्पष्ट अहवालांसह तुमचा खर्च आणि उत्पन्न पाहा.</string>
+    <string name="note_continue3">तुमच्या बजेटवर लक्ष ठेवा आणि बचत वाढवा.</string>
+    <string name="note_continue4">ध्येय ठेवा, प्रगती ट्रॅक करा आणि आर्थिक सवयी तयार करा.</string>
+
+    <string name="note_guide1">तुमचा खर्च व्यवस्थापित करण्यासाठी ‘बजेट’ टॅप करा</string>
+    <string name="note_guide2">एक नजरात उरलेली रक्कम पाहा</string>
+    <string name="note_guide3">बजेट दरम्यान सहज स्विच करा</string>
+    <string name="note_guide4">खर्च विश्लेषण करा आणि ट्रॅकवर रहा</string>
+
+    <string name="budget_detail">बजेट तपशील</string>
+    <string name="add_budget">बजेट जोडा</string>
+    <string name="next">पुढे</string>
+    <string name="currency_unit">चलन एकक</string>
+    <string name="search">शोधा</string>
+    <string name="add">जोडा</string>
+    <string name="expense">खर्च</string>
+    <string name="income">उत्पन्न</string>
+    <string name="loan">कर्ज</string>
+    <string name="amount">रक्कम</string>
+    <string name="category">वर्ग</string>
+    <string name="budget">बजेट</string>
+    <string name="note">टीप</string>
+    <string name="add_a_description">वर्णन जोडा</string>
+    <string name="select_date">तारीख निवडा</string>
+    <string name="date_time">तारीख आणि वेळ</string>
+    <string name="select_time">वेळ निवडा</string>
+    <string name="interest">व्याज</string>
+    <string name="please_select_at_least_2_options_to_continue">*कृपया पुढे जाण्यासाठी किमान २ पर्याय निवडा.</string>
+    <string name="total">एकूण</string>
+    <string name="please_select_language_to_continue">कृपया पुढे जाण्यासाठी भाषा निवडा</string>
+    <string name="save">जतन करा</string>
+    <string name="cancel">रद्द करा</string>
+    <string name="budget_name">बजेट नाव</string>
+    <string name="transactions">व्यवहार</string>
+    <string name="date">तारीख</string>
+    <string name="delete_transaction">व्यवहार हटवा</string>
+    <string name="statistic">सांख्यिकी</string>
+    <string name="home">मुखपृष्ठ</string>
+    <string name="settings">सेटिंग्ज</string>
+    <string name="add_your_first_transaction">तुमचा पहिला व्यवहार जोडा.</string>
+    <string name="total_balance">एकूण शिल्लक</string>
+    <string name="month">महिना</string>
+    <string name="borrow">कर्ज घ्या</string>
+    <string name="balance">शिल्लक</string>
+    <string name="edit">संपादित करा</string>
+    <string name="currency">चलन</string>
+    <string name="language">भाषा</string>
+    <string name="share">शेअर करा</string>
+    <string name="privacy_policy">गोपनीयता धोरण</string>
+    <string name="rating">रेटिंग</string>
+    <string name="please_add_transaction_first">कृपया प्रथम व्यवहार जोडा</string>
+
+
+</resources>

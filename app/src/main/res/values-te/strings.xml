@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">స్మార్ట్ మనీ టూల్స్‌తో మీ ఆర్థిక జీవితం సులభం చేయండి.</string>
+    <string name="note_continue2">స్పష్టమైన నివేదికల ద్వారా మీ ఖర్చులు మరియు ఆదాయాన్ని కనబరుస్తుంది.</string>
+    <string name="note_continue3">బడ్జెట్‌ను అర్థం చేసుకొని ఆదాయాన్ని పెంచుకోండి.</string>
+    <string name="note_continue4">లక్ష్యాలు సెట్ చేసుకొని, పురోగతిని ట్రాక్ చేసి, ఆర్థిక అలవాట్లు నిర్మించండి.</string>
+
+    <string name="note_guide1">“బడ్జెట్”ను ట్యాప్ చేసి మీ ఖర్చులను నిర్వహించండి</string>
+    <string name="note_guide2">మిగిలిన బ్యాలెన్స్‌ను ఒక్క చూపుతో చూడండి</string>
+    <string name="note_guide3">బడ్జెట్ల మధ్య సులభంగా మారవచ్చు</string>
+    <string name="note_guide4">ఖర్చులను విశ్లేషించి సరైన దారిలో ఉండండి</string>
+
+    <string name="budget_detail">బడ్జెట్ వివరాలు</string>
+    <string name="add_budget">బడ్జెట్ చేర్చండి</string>
+    <string name="next">తరువాత</string>
+    <string name="currency_unit">కరెన్సీ యూనిట్</string>
+    <string name="search">శోధించండి</string>
+    <string name="add">జోడించండి</string>
+    <string name="expense">ఖర్చు</string>
+    <string name="income">ఆదాయం</string>
+    <string name="loan">పింఛన్</string>
+    <string name="amount">మొత్తం</string>
+    <string name="category">వర్గం</string>
+    <string name="budget">బడ్జెట్</string>
+    <string name="note">గమనిక</string>
+    <string name="add_a_description">వివరణ జోడించండి</string>
+    <string name="select_date">తేదీ ఎంచుకోండి</string>
+    <string name="date_time">తేది మరియు సమయం</string>
+    <string name="select_time">సమయం ఎంచుకోండి</string>
+    <string name="interest">వడ్డీ</string>
+    <string name="please_select_at_least_2_options_to_continue">*దయచేసి కొనసాగేందుకు కనీసం 2 ఎంపికలను ఎంచుకోండి.</string>
+    <string name="total">మొత్తం</string>
+    <string name="please_select_language_to_continue">కొనసాగేందుకు దయచేసి భాషను ఎంచుకోండి</string>
+    <string name="save">సేవ్ చేయండి</string>
+    <string name="cancel">రద్దు చేయండి</string>
+    <string name="budget_name">బడ్జెట్ పేరు</string>
+    <string name="transactions">పరివర్తనలు</string>
+    <string name="date">తేది</string>
+    <string name="delete_transaction">పరివర్తనను తొలగించండి</string>
+    <string name="statistic">సంఖ్యాశాస్త్రం</string>
+    <string name="home">హోమ్</string>
+    <string name="settings">సెట్టింగ్స్</string>
+    <string name="add_your_first_transaction">మీ మొదటి పరివర్తనను జోడించండి.</string>
+    <string name="total_balance">మొత్తం బ్యాలెన్స్</string>
+    <string name="month">నెల</string>
+    <string name="borrow">పాపందించండి</string>
+    <string name="balance">బ్యాలెన్స్</string>
+    <string name="edit">సవరించండి</string>
+    <string name="currency">కరెన్సీ</string>
+    <string name="language">భాష</string>
+    <string name="share">షేర్ చేయండి</string>
+    <string name="privacy_policy">గోప్యతా విధానం</string>
+    <string name="rating">రేటింగ్</string>
+    <string name="please_add_transaction_first">దయచేసి ముందుగా పరివర్తనను జోడించండి</string>
+
+
+</resources>

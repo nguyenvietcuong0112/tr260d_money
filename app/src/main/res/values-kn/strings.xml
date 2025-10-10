@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">ಸ್ಮಾರ್ಟ್ ಹಣ ಸಾಧನಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಹಣಕಾಸು ಜೀವನವನ್ನು ಸರಳಗೊಳಿಸಿ.</string>
+    <string name="note_continue2">ಸ್ಪಷ್ಟ ವರದಿಗಳೊಂದಿಗೆ ನಿಮ್ಮ ವೆಚ್ಚ ಮತ್ತು ಆದಾಯವನ್ನು ದೃಶ್ಯೀಕರಿಸಿ.</string>
+    <string name="note_continue3">ನಿಮ್ಮ ಬಜೆಟ್ ಮೇಲೆ ನಿಯಂತ್ರಣ ವಹಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಸಂಗ್ರಹವನ್ನು ಹೆಚ್ಚಿಸಿ.</string>
+    <string name="note_continue4">ಲಕ್ಷ್ಯಗಳನ್ನು ನಿಗದಿಪಡಿಸಿ, ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ ಮತ್ತು ಹಣಕಾಸು ಅಭ್ಯಾಸಗಳನ್ನು ರೂಪಿಸಿ.</string>
+
+    <string name="note_guide1">ನಿಮ್ಮ ವೆಚ್ಚವನ್ನು ನಿರ್ವಹಿಸಲು ‘ಬಜೆಟ್’ ಅನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
+    <string name="note_guide2">ಬಾಕಿ ಇರುವ ಶೇಷವನ್ನು ಒಂದು ನೋಟದಲ್ಲಿ ನೋಡಿ</string>
+    <string name="note_guide3">ಬಜೆಟ್‌ಗಳ ನಡುವೆ ಸುಲಭವಾಗಿ ಸ್ವಿಚ್ ಮಾಡಿ</string>
+    <string name="note_guide4">ವೆಚ್ಚವನ್ನು ವಿಶ್ಲೇಷಿಸಿ ಮತ್ತು ಮಾರ್ಗದಲ್ಲಿರಿರಿ</string>
+
+    <string name="budget_detail">ಬಜೆಟ್ ವಿವರ</string>
+    <string name="add_budget">ಬಜೆಟ್ ಸೇರಿಸಿ</string>
+    <string name="next">ಮುಂದಿನದು</string>
+    <string name="currency_unit">ಕರೆನ್ಸಿ ಘಟಕ</string>
+    <string name="search">ಹುಡುಕಿ</string>
+    <string name="add">ಸೇರಿಸಿ</string>
+    <string name="expense">ವೆಚ್ಚ</string>
+    <string name="income">ಆದಾಯ</string>
+    <string name="loan"> ಸಾಲ</string>
+    <string name="amount">ಮೊತ್ತ</string>
+    <string name="category">ವರ್ಗ</string>
+    <string name="budget">ಬಜೆಟ್</string>
+    <string name="note">ಟಿಪ್ಪಣಿ</string>
+    <string name="add_a_description">ವಿವರಣೆ ಸೇರಿಸಿ</string>
+    <string name="select_date">ದಿನಾಂಕ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="date_time">ದಿನಾಂಕ ಮತ್ತು ಸಮಯ</string>
+    <string name="select_time">ಸಮಯ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="interest">ಬಡ್ಡಿ</string>
+    <string name="please_select_at_least_2_options_to_continue">*ಮುಂದುವರೆಯಲು ಕನಿಷ್ಠ 2 ಆಯ್ಕೆಗಳು ಆಯ್ಕೆಮಾಡಿ.</string>
+    <string name="total">ಒಟ್ಟು</string>
+    <string name="please_select_language_to_continue">ಮುಂದುವರೆಯಲು ದಯವಿಟ್ಟು ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="save">ಉಳಿಸಿ</string>
+    <string name="cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="budget_name">ಬಜೆಟ್ ಹೆಸರು</string>
+    <string name="transactions">ವಹಿವಾಟುಗಳು</string>
+    <string name="date">ದಿನಾಂಕ</string>
+    <string name="delete_transaction">ವಹಿವಾಟು ಅಳಿಸಿ</string>
+    <string name="statistic">ಸಾಂಖ್ಯಿಕ</string>
+    <string name="home">ಮುಖಪುಟ</string>
+    <string name="settings">ಸೆಟ್ಟಿಂಗ್ಗಳು</string>
+    <string name="add_your_first_transaction">ನಿಮ್ಮ ಮೊದಲ ವಹಿವಾಟನ್ನು ಸೇರಿಸಿ.</string>
+    <string name="total_balance">ಒಟ್ಟು ಶೇಷ</string>
+    <string name="month">ತಿಂಗಳು</string>
+    <string name="borrow">ಸಾಲಕ್ಕೆ ಪಡೆಯಿರಿ</string>
+    <string name="balance">ಶೇಷ</string>
+    <string name="edit">ತಿದ್ದುಪಡಿಸಿ</string>
+    <string name="currency">ಕರೆನ್ಸಿ</string>
+    <string name="language">ಭಾಷೆ</string>
+    <string name="share">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="privacy_policy">ಗೌಪ್ಯತಾ ನೀತಿ</string>
+    <string name="rating">ಮೌಲ್ಯಮಾಪನ</string>
+    <string name="please_add_transaction_first">ದಯವಿಟ್ಟು ಮೊದಲು ವಹಿವಾಟು ಸೇರಿಸಿ</string>
+
+
+
+</resources>

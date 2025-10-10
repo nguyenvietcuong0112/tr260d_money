@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">ସ୍ମାର୍ଟ ଟଙ୍କା ଉପକରଣମାନେ ଦ୍ୱାରା ଆପଣଙ୍କର ଆର୍ଥିକ ଜୀବନକୁ ସହଜ କରନ୍ତୁ।</string>
+    <string name="note_continue2">ସ୍ପଷ୍ଟ ରିପୋର୍ଟ ମାଧ୍ୟମରେ ଆପଣଙ୍କର ଖର୍ଚ୍ଚ ଓ ଆୟକୁ ଦେଖନ୍ତୁ।</string>
+    <string name="note_continue3">ବଜେଟ୍‌କୁ ଟ୍ରାକ୍ କରନ୍ତୁ ଏବଂ ସଞ୍ଚୟ ବଢ଼ାନ୍ତୁ।</string>
+    <string name="note_continue4">ଲକ୍ଷ୍ୟ ସେଟ୍ କରନ୍ତୁ, ପ୍ରଗତି ଟ୍ରାକ୍ କରନ୍ତୁ ଏବଂ ଆର୍ଥିକ ଅଭ୍ୟାସ ଗଢ଼ନ୍ତୁ।</string>
+
+    <string name="note_guide1">ଆପଣଙ୍କର ଖର୍ଚ୍ଚ ପରିଚାଳନା ପାଇଁ "ବଜେଟ୍"କୁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
+    <string name="note_guide2">ଏକ ଦୃଷ୍ଟିରେ ବ୍ୟାଲେନ୍ସ୍ ଦେଖନ୍ତୁ</string>
+    <string name="note_guide3">ସହଜରେ ବଜେଟ୍‌ମାନଙ୍କ ମଧ୍ୟରେ ଚାଲନ୍ତୁ</string>
+    <string name="note_guide4">ଖର୍ଚ୍ଚ ବିଶ୍ଲେଷଣ କରନ୍ତୁ ଏବଂ ସଠିକ୍ ପଥରେ ରୁହନ୍ତୁ</string>
+
+    <string name="budget_detail">ବଜେଟ୍ ବିବରଣୀ</string>
+    <string name="add_budget">ବଜେଟ୍ ଯୋଗ କରନ୍ତୁ</string>
+    <string name="next">ପରବର୍ତ୍ତୀ</string>
+    <string name="currency_unit">ମୁଦ୍ରା ଇକାଇ</string>
+    <string name="search">ଖୋଜନ୍ତୁ</string>
+    <string name="add">ଯୋଗ କରନ୍ତୁ</string>
+    <string name="expense">ଖର୍ଚ୍ଚ</string>
+    <string name="income">ଆୟ</string>
+    <string name="loan">ଋଣ</string>
+    <string name="amount">ରାଶି</string>
+    <string name="category">ଶ୍ରେଣୀ</string>
+    <string name="budget">ବଜେଟ୍</string>
+    <string name="note">ଟିପ୍ପଣୀ</string>
+    <string name="add_a_description">ବିବରଣୀ ଯୋଗ କରନ୍ତୁ</string>
+    <string name="select_date">ତାରିଖ ଚୟନ କରନ୍ତୁ</string>
+    <string name="date_time">ତାରିଖ ଏବଂ ସମୟ</string>
+    <string name="select_time">ସମୟ ଚୟନ କରନ୍ତୁ</string>
+    <string name="interest">ସୁଧ</string>
+    <string name="please_select_at_least_2_options_to_continue">*କୃପୟା ଜାରି ରଖିବା ପାଇଁ କମ ସେ କମ ୨ଟି ବିକଳ୍ପ ଚୟନ କରନ୍ତୁ।</string>
+    <string name="total">ମୋଟ</string>
+    <string name="please_select_language_to_continue">ଦୟାକରି ଜାରି ରଖିବା ପାଇଁ ଭାଷା ଚୟନ କରନ୍ତୁ</string>
+    <string name="save">ସଂରକ୍ଷଣ କରନ୍ତୁ</string>
+    <string name="cancel">ବାତିଲ୍ କରନ୍ତୁ</string>
+    <string name="budget_name">ବଜେଟ୍ ନାମ</string>
+    <string name="transactions">ଲେନଦେନ</string>
+    <string name="date">ତାରିଖ</string>
+    <string name="delete_transaction">ଲେନଦେନ ହଟାନ୍ତୁ</string>
+    <string name="statistic">ସାଂଖ୍ୟିକୀ</string>
+    <string name="home">ହୋମ୍</string>
+    <string name="settings">ସେଟିଂସ୍</string>
+    <string name="add_your_first_transaction">ଆପଣଙ୍କର ପ୍ରଥମ ଲେନଦେନ ଯୋଗ କରନ୍ତୁ।</string>
+    <string name="total_balance">ମୋଟ ବ୍ୟାଲେନ୍ସ୍</string>
+    <string name="month">ମାସ</string>
+    <string name="borrow">ଋଣ ନିଅନ୍ତୁ</string>
+    <string name="balance">ବ୍ୟାଲେନ୍ସ୍</string>
+    <string name="edit">ସଂଶୋଧନ କରନ୍ତୁ</string>
+    <string name="currency">ମୁଦ୍ରା</string>
+    <string name="language">ଭାଷା</string>
+    <string name="share">ସେୟାର୍ କରନ୍ତୁ</string>
+    <string name="privacy_policy">ଗୋପନୀୟତା ନୀତି</string>
+    <string name="rating">ମୂଲ୍ୟାୟନ</string>
+    <string name="please_add_transaction_first">ଦୟାକରି ପ୍ରଥମେ ଲେନଦେନ ଯୋଗ କରନ୍ତୁ</string>
+
+
+</resources>

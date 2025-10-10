@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">Simplifique sua vida financeira com ferramentas inteligentes de dinheiro.</string>
+    <string name="note_continue2">Visualize suas despesas e receitas com relatórios claros.</string>
+    <string name="note_continue3">Mantenha o controle do seu orçamento e aumente suas economias.</string>
+    <string name="note_continue4">Defina metas, acompanhe o progresso e crie hábitos financeiros.</string>
+
+    <string name="note_guide1">Toque em ‘Orçamento’ para gerenciar seus gastos</string>
+    <string name="note_guide2">Veja seu saldo restante rapidamente</string>
+    <string name="note_guide3">Alterne entre orçamentos facilmente</string>
+    <string name="note_guide4">Analise os gastos e mantenha-se no caminho</string>
+
+    <string name="budget_detail">Detalhe do orçamento</string>
+    <string name="add_budget">Adicionar orçamento</string>
+    <string name="next">Próximo</string>
+    <string name="currency_unit">Unidade monetária</string>
+    <string name="search">Pesquisar</string>
+    <string name="add">Adicionar</string>
+    <string name="expense">Despesa</string>
+    <string name="income">Receita</string>
+    <string name="loan">Empréstimo</string>
+    <string name="amount">Quantia</string>
+    <string name="category">Categoria</string>
+    <string name="budget">Orçamento</string>
+    <string name="note">Nota</string>
+    <string name="add_a_description">Adicionar uma descrição</string>
+    <string name="select_date">Selecione a data</string>
+    <string name="date_time">Data e hora</string>
+    <string name="select_time">Selecione o horário</string>
+    <string name="interest">Juros</string>
+    <string name="please_select_at_least_2_options_to_continue">*Por favor, selecione pelo menos 2 opções para continuar.</string>
+    <string name="total">Total</string>
+    <string name="please_select_language_to_continue">Por favor, selecione o idioma para continuar</string>
+    <string name="save">Salvar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="budget_name">Nome do orçamento</string>
+    <string name="transactions">Transações</string>
+    <string name="date">Data</string>
+    <string name="delete_transaction">Excluir transação</string>
+    <string name="statistic">Estatística</string>
+    <string name="home">Início</string>
+    <string name="settings">Configurações</string>
+    <string name="add_your_first_transaction">Adicione sua primeira transação.</string>
+    <string name="total_balance">Saldo total</string>
+    <string name="month">Mês</string>
+    <string name="borrow">Pedir emprestado</string>
+    <string name="balance">Saldo</string>
+    <string name="edit">Editar</string>
+    <string name="currency">Moeda</string>
+    <string name="language">Idioma</string>
+    <string name="share">Compartilhar</string>
+    <string name="privacy_policy">Política de privacidade</string>
+    <string name="rating">Avaliação</string>
+    <string name="please_add_transaction_first">Por favor, adicione uma transação primeiro</string>
+
+
+</resources>

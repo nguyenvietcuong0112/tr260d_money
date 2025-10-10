@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">സ്മാർട്ട് മണി ടൂളുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ സാമ്പത്തിക ജീവിതം ലളിതമാക്കൂ.</string>
+    <string name="note_continue2">സൂക്ഷ്മമായ റിപ്പോർട്ടുകളിലൂടെ നിങ്ങളുടെ ചെലവുകളും വരുമാനവും കാണുക.</string>
+    <string name="note_continue3">നിങ്ങളുടെ ബഡ്ജറ്റ് നിയന്ത്രണത്തിൽ വയ്ക്കുകയും സേവിംഗ്സ് വർദ്ധിപ്പിക്കുകയും ചെയ്യുക.</string>
+    <string name="note_continue4">ലക്ഷ്യങ്ങൾ നിശ്ചയിച്ച് പുരോഗതി ട്രാക്ക് ചെയ്യുകയും സാമ്പത്തിക ശീലങ്ങൾ രൂപപ്പെടുത്തുകയും ചെയ്യുക.</string>
+
+    <string name="note_guide1">ചെലവുകൾ നിയന്ത്രിക്കാൻ ‘ബഡ്ജറ്റ്’ ടാപ്പ് ചെയ്യുക</string>
+    <string name="note_guide2">നിങ്ങളുടെ ബാക്കി ബാലൻസ് ഒരു കണിക്കാഴ്ചയിൽ കാണുക</string>
+    <string name="note_guide3">ബഡ്ജറ്റുകൾക്കിടയിൽ എളുപ്പത്തിൽ മാറുക</string>
+    <string name="note_guide4">ചെലവുകൾ വിശകലനം ചെയ്ത് ട്രാക്കിൽ തുടരുക</string>
+
+    <string name="budget_detail">ബഡ്ജറ്റ് വിശദാംശങ്ങൾ</string>
+    <string name="add_budget">ബഡ്ജറ്റ് ചേർക്കുക</string>
+    <string name="next">അടുത്തത്</string>
+    <string name="currency_unit">നാണയ യൂണിറ്റ്</string>
+    <string name="search">തിരയുക</string>
+    <string name="add">ചേർക്കുക</string>
+    <string name="expense">ചെലവ്</string>
+    <string name="income">വരുമാനം</string>
+    <string name="loan">കഡുതി</string>
+    <string name="amount">തുക</string>
+    <string name="category">വർഗ്ഗം</string>
+    <string name="budget">ബഡ്ജറ്റ്</string>
+    <string name="note">കുറിപ്പ്</string>
+    <string name="add_a_description">വിവരണം ചേർക്കുക</string>
+    <string name="select_date">തീയതി തിരഞ്ഞെടുക്കുക</string>
+    <string name="date_time">തീയതി സമയം</string>
+    <string name="select_time">സമയം തിരഞ്ഞെടുക്കുക</string>
+    <string name="interest">പലിശ</string>
+    <string name="please_select_at_least_2_options_to_continue">*തുടരാൻ കുറഞ്ഞത് 2 ഓപ്ഷനുകൾ തിരഞ്ഞെടുക്കുക.</string>
+    <string name="total">മൊത്തം</string>
+    <string name="please_select_language_to_continue">തുടരാൻ ഭാഷ തിരഞ്ഞെടുക്കുക</string>
+    <string name="save">സേവ് ചെയ്യുക</string>
+    <string name="cancel">റദ്ദാക്കുക</string>
+    <string name="budget_name">ബഡ്ജറ്റ് പേര്</string>
+    <string name="transactions">വ്യവഹാരങ്ങൾ</string>
+    <string name="date">തീയതി</string>
+    <string name="delete_transaction">വ്യവഹാരം മായ്ച്ചു കളയുക</string>
+    <string name="statistic">സ്റ്റാറ്റിസ്റ്റിക്</string>
+    <string name="home">ഹോം</string>
+    <string name="settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="add_your_first_transaction">നിങ്ങളുടെ ആദ്യത്തെ വ്യാപാരം ചേർക്കുക.</string>
+    <string name="total_balance">മൊത്തം ബാലൻസ്</string>
+    <string name="month">മാസം</string>
+    <string name="borrow">പോണം വാങ്ങുക</string>
+    <string name="balance">ബാലൻസ്</string>
+    <string name="edit">എഡിറ്റ്</string>
+    <string name="currency">നാണയം</string>
+    <string name="language">ഭാഷ</string>
+    <string name="share">പങ്കിടുക</string>
+    <string name="privacy_policy">സ്വകാര്യതാ നയം</string>
+    <string name="rating">റേറ്റിങ്</string>
+    <string name="please_add_transaction_first">ദയവായി ആദ്യം വ്യാപാരം ചേർക്കുക</string>
+
+
+</resources>

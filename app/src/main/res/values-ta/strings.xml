@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">ஸ்மார்ட் பண கருவிகளால் உங்கள் நிதி வாழ்க்கையை எளிதாக்குங்கள்.</string>
+    <string name="note_continue2">தெளிவான அறிக்கைகளுடன் உங்கள் செலவுகள் மற்றும் வருமானத்தை காட்சிப்படுத்துங்கள்.</string>
+    <string name="note_continue3">பட்ஜெட்டை கண்காணித்து சேமிப்புகளை அதிகரிக்கவும்.</string>
+    <string name="note_continue4">இலக்குகளை அமைத்து முன்னேற்றத்தை பின்தொடரவும், நிதி பழக்கங்களை உருவாக்கவும்.</string>
+
+    <string name="note_guide1">“பட்ஜெட்” என்பதனை தட்டச்சு செய்து உங்கள் செலவுகளை நிர்வகிக்கவும்</string>
+    <string name="note_guide2">மீதமுள்ள தொகையை ஒரே பார்வையிலேயே காணலாம்</string>
+    <string name="note_guide3">பட்ஜெட்டுகளை எளிதாக மாற்றலாம்</string>
+    <string name="note_guide4">செலவுகளை பகுப்பாய்வு செய்து திசையை பின்பற்றவும்</string>
+
+    <string name="budget_detail">பட்ஜெட் விவரங்கள்</string>
+    <string name="add_budget">பட்ஜெட்டைச் சேர்க்கவும்</string>
+    <string name="next">அடுத்தது</string>
+    <string name="currency_unit">நாணய அலகு</string>
+    <string name="search">தேடு</string>
+    <string name="add">சேர்</string>
+    <string name="expense">செலவு</string>
+    <string name="income">வருமானம்</string>
+    <string name="loan">கடன்</string>
+    <string name="amount">தொகை</string>
+    <string name="category">வகை</string>
+    <string name="budget">பட்ஜெட்</string>
+    <string name="note">குறிப்பு</string>
+    <string name="add_a_description">விவரத்தைச் சேர்க்கவும்</string>
+    <string name="select_date">தேதியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="date_time">தேதி மற்றும் நேரம்</string>
+    <string name="select_time">நேரத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="interest">வட்டி</string>
+    <string name="please_select_at_least_2_options_to_continue">*தொடர இரண்டு விருப்பங்களைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="total">மொத்தம்</string>
+    <string name="please_select_language_to_continue">தொடர மொழியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="save">சேமிக்கவும்</string>
+    <string name="cancel">ரத்து செய்</string>
+    <string name="budget_name">பட்ஜெட் பெயர்</string>
+    <string name="transactions">பரிவர்த்தனைகள்</string>
+    <string name="date">தேதி</string>
+    <string name="delete_transaction">பரிவர்த்தனையை நீக்கு</string>
+    <string name="statistic">புள்ளிவிவரங்கள்</string>
+    <string name="home">முகப்பு</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="add_your_first_transaction">உங்கள் முதல் பரிவர்த்தனையைச் சேர்க்கவும்.</string>
+    <string name="total_balance">மொத்த இருப்பு</string>
+    <string name="month">மாதம்</string>
+    <string name="borrow">கடன் வாங்குதல்</string>
+    <string name="balance">இருப்பு</string>
+    <string name="edit">திருத்து</string>
+    <string name="currency">நாணயம்</string>
+    <string name="language">மொழி</string>
+    <string name="share">பகிர்</string>
+    <string name="privacy_policy">தனியுரிமைக் கொள்கை</string>
+    <string name="rating">மதிப்பீடு</string>
+    <string name="please_add_transaction_first">முதலில் பரிவர்த்தனையைச் சேர்க்கவும்</string>
+
+
+</resources>

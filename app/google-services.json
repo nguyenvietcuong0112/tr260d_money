@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "975286043851",
+    "project_id": "tr260c-money",
+    "storage_bucket": "tr260c-money.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975286043851:android:dde6b241225d7f95d4474e",
+        "android_client_info": {
+          "package_name": "com.budgettracker.personalfinance.trackmoney.smartbudget"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOjkLRmVeqHS-77yMOZyx1ihUj6WOVh_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+        //dev
+        <string name="app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+
+        <string name="inter_splash" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+        <string name="inter_intro" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+        <string name="inter_navbar" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+        <string name="inter_save" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+        <string name="inter_splash_uninstall" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+        //new
+        <string name="native_full_intro" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_full_navbar" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+            <string name="open_splash_noti" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
+
+
+        <string name="native_keep_user" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+        <string name="native_onboarding1" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_onboarding2" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_onboarding3" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_onboarding4" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+        <string name="native_language" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_language_select" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_full_language" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+        <string name="native_add_transaction" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_detail_transaction" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_budget_detail" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+
+        <string name="open_resume" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
+        <string name="banner_collap" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
+
+        <string name="native_expand_home" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_collap_home" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_settings" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+        <string name="banner_collapse_intro" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
+
+        <string name="native_exit" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_currency" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+        <string name="native_banner_add_transaction" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="native_banner_home" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+
+        <string name="AF_DEV_KEY" translatable="false">LikYKU2zUYTct7BoQ7MuJY</string>
+        <string name="facebook_app_id" translatable="false">756810216673241</string>
+        <string name="facebook_client_token" translatable="false">e6437dba9e650f2baa223523e1f5e75e</string>
+
+    //PROD
+<!--    <string name="app_id" translatable="false">ca-app-pub-5839511744003864~9993741486</string>-->
+
+<!--    <string name="inter_splash" translatable="false"></string>-->
+<!--    <string name="inter_intro" translatable="false"></string>-->
+<!--    <string name="inter_navbar" translatable="false"></string>-->
+<!--    <string name="inter_save" translatable="false"></string>-->
+
+<!--    //new-->
+<!--    <string name="native_full_intro" translatable="false"></string>-->
+<!--    <string name="native_full_navbar" translatable="false"></string>-->
+
+<!--    <string name="native_keep_user" translatable="false"></string>-->
+<!--    <string name="inter_splash_uninstall" translatable="false"></string>-->
+
+
+<!--    <string name="native_onboarding1" translatable="false"></string>-->
+<!--    <string name="native_onboarding2" translatable="false"></string>-->
+<!--    <string name="native_onboarding3" translatable="false"></string>-->
+<!--    <string name="native_onboarding4" translatable="false"></string>-->
+
+<!--    <string name="native_language" translatable="false"></string>-->
+<!--    <string name="native_language_select" translatable="false"></string>-->
+<!--    <string name="native_full_language" translatable="false"></string>-->
+
+<!--    <string name="native_add_transaction" translatable="false"></string>-->
+<!--    <string name="native_detail_transaction" translatable="false"></string>-->
+<!--    <string name="native_budget_detail" translatable="false"></string>-->
+
+
+<!--    <string name="open_resume" translatable="false"></string>-->
+
+<!--    <string name="native_expand_home" translatable="false"></string>-->
+<!--    <string name="native_collap_home" translatable="false"></string>-->
+<!--    <string name="native_settings" translatable="false"></string>-->
+
+<!--    <string name="banner_collapse_intro" translatable="false"></string>-->
+
+<!--    <string name="native_exit" translatable="false"></string>-->
+<!--    <string name="native_currency" translatable="false"></string>-->
+<!--    <string name="native_banner_add_transaction" translatable="false"></string>-->
+<!--    <string name="native_banner_home" translatable="false"></string>-->
+<!--    <string name="open_splash_noti" translatable="false"></string>-->
+
+<!--    <string name="AF_DEV_KEY" translatable="false">LikYKU2zUYTct7BoQ7MuJY</string>-->
+<!--    <string name="facebook_app_id" translatable="false">1234</string>-->
+<!--    <string name="facebook_client_token" translatable="false">4567</string>-->
+
+
+</resources>

@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">अपने वित्तीय जीवन को स्मार्ट मनी टूल्स के साथ सरल बनाएं।</string>
+    <string name="note_continue2">स्पष्ट रिपोर्ट के साथ अपने खर्च और आय को देखें।</string>
+    <string name="note_continue3">अपने बजट पर नियंत्रण रखें और अपनी बचत बढ़ाएं।</string>
+    <string name="note_continue4">लक्ष्य निर्धारित करें, प्रगति ट्रैक करें, और वित्तीय आदतें बनाएं।</string>
+
+    <string name="note_guide1">अपने खर्च को प्रबंधित करने के लिए ‘बजट’ पर टैप करें</string>
+    <string name="note_guide2">एक नजर में अपनी बची हुई राशि देखें</string>
+    <string name="note_guide3">बजट के बीच आसानी से स्विच करें</string>
+    <string name="note_guide4">खर्चों का विश्लेषण करें और ट्रैक पर रहें</string>
+
+    <string name="budget_detail">बजट विवरण</string>
+    <string name="add_budget">बजट जोड़ें</string>
+    <string name="next">अगला</string>
+    <string name="currency_unit">मुद्रा इकाई</string>
+    <string name="search">खोजें</string>
+    <string name="add">जोड़ें</string>
+    <string name="expense">खर्च</string>
+    <string name="income">आय</string>
+    <string name="loan">ऋण</string>
+    <string name="amount">राशि</string>
+    <string name="category">श्रेणी</string>
+    <string name="budget">बजट</string>
+    <string name="note">टिप्पणी</string>
+    <string name="add_a_description">विवरण जोड़ें</string>
+    <string name="select_date">तारीख चुनें</string>
+    <string name="date_time">तारीख और समय</string>
+    <string name="select_time">समय चुनें</string>
+    <string name="interest">ब्याज</string>
+    <string name="please_select_at_least_2_options_to_continue">*कृपया जारी रखने के लिए कम से कम 2 विकल्प चुनें।</string>
+    <string name="total">कुल</string>
+    <string name="please_select_language_to_continue">कृपया जारी रखने के लिए भाषा चुनें</string>
+    <string name="save">सहेजें</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="budget_name">बजट का नाम</string>
+    <string name="transactions">लेन-देन</string>
+    <string name="date">तारीख</string>
+    <string name="delete_transaction">लेन-देन हटाएं</string>
+    <string name="statistic">आंकड़े</string>
+    <string name="home">मुखपृष्ठ</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="add_your_first_transaction">अपना पहला लेन-देन जोड़ें।</string>
+    <string name="total_balance">कुल बैलेंस</string>
+    <string name="month">महीना</string>
+    <string name="borrow">उधार लें</string>
+    <string name="balance">बैलेंस</string>
+    <string name="edit">संपादित करें</string>
+    <string name="currency">मुद्रा</string>
+    <string name="language">भाषा</string>
+    <string name="share">साझा करें</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="rating">रेटिंग</string>
+    <string name="please_add_transaction_first">कृपया पहले लेन-देन जोड़ें</string>
+
+</resources>

@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'com.budgettracker.personalfinance.trackmoney.smartbudget'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.budgettracker.personalfinance.trackmoney.smartbudget"
+        minSdk 24
+        //noinspection EditedTargetSdkVersion
+        targetSdk 35
+        versionCode 100
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        def formattedDate = new Date().format('MM.dd.yyyy')
+        archivesBaseName = "TR260D_MoneyManager_v${versionName}_(${versionCode})_${formattedDate}"
+        bundle{
+            language{
+                enableSplit = false
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    implementation 'com.google.android.gms:play-services-auth:21.3.0'
+    implementation 'com.google.firebase:firebase-auth:23.2.0'
+    implementation 'com.github.midorikocak:currency-picker-android:1.2.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.airbnb.android:lottie:6.5.0'
+
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    implementation 'com.google.android.gms:play-services-ads:23.6.0'
+
+    implementation 'com.google.android.ads.consent:consent-library:1.0.8'
+    implementation 'com.google.android.ump:user-messaging-platform:3.1.0'
+    //ads
+    implementation 'com.github.nguyentruongnvt72:ads-mallegan-lib:1.3.1'
+    implementation platform('com.google.firebase:firebase-bom:34.3.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-database'
+    implementation  'io.ak1:bubbletabbar:1.0.8'
+
+    //fb sdk
+    implementation 'com.facebook.android:facebook-android-sdk:18.0.2'
+    implementation 'com.google.ads.mediation:facebook:6.20.0.0'
+    implementation 'com.appsflyer:af-android-sdk:6.16.0'
+    implementation 'com.appsflyer:adrevenue:6.9.1'
+
+}

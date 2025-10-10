@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">스마트 금융 도구로 재정 생활을 간소화하세요.</string>
+    <string name="note_continue2">명확한 보고서로 지출과 수입을 시각화하세요.</string>
+    <string name="note_continue3">예산을 관리하고 저축을 늘리세요.</string>
+    <string name="note_continue4">목표를 설정하고 진행 상황을 추적하며 금융 습관을 기르세요.</string>
+
+    <string name="note_guide1">‘예산’을 눌러 지출을 관리하세요</string>
+    <string name="note_guide2">남은 잔액을 한눈에 확인하세요</string>
+    <string name="note_guide3">예산 간에 쉽게 전환하세요</string>
+    <string name="note_guide4">지출을 분석하고 계획을 유지하세요</string>
+
+    <string name="budget_detail">예산 세부 정보</string>
+    <string name="add_budget">예산 추가</string>
+    <string name="next">다음</string>
+    <string name="currency_unit">통화 단위</string>
+    <string name="search">검색</string>
+    <string name="add">추가</string>
+    <string name="expense">지출</string>
+    <string name="income">수입</string>
+    <string name="loan">대출</string>
+    <string name="amount">금액</string>
+    <string name="category">카테고리</string>
+    <string name="budget">예산</string>
+    <string name="note">메모</string>
+    <string name="add_a_description">설명 추가</string>
+    <string name="select_date">날짜 선택</string>
+    <string name="date_time">날짜 및 시간</string>
+    <string name="select_time">시간 선택</string>
+    <string name="interest">이자</string>
+    <string name="please_select_at_least_2_options_to_continue">*계속하려면 최소 2개 옵션을 선택하세요.</string>
+    <string name="total">총합</string>
+    <string name="please_select_language_to_continue">계속하려면 언어를 선택하세요</string>
+    <string name="save">저장</string>
+    <string name="cancel">취소</string>
+    <string name="budget_name">예산 이름</string>
+    <string name="transactions">거래</string>
+    <string name="date">날짜</string>
+    <string name="delete_transaction">거래 삭제</string>
+    <string name="statistic">통계</string>
+    <string name="home">홈</string>
+    <string name="settings">설정</string>
+    <string name="add_your_first_transaction">첫 거래를 추가하세요.</string>
+    <string name="total_balance">총 잔액</string>
+    <string name="month">월</string>
+    <string name="borrow">빌리기</string>
+    <string name="balance">잔액</string>
+    <string name="edit">편집</string>
+    <string name="currency">통화</string>
+    <string name="language">언어</string>
+    <string name="share">공유</string>
+    <string name="privacy_policy">개인정보 처리방침</string>
+    <string name="rating">평점</string>
+    <string name="please_add_transaction_first">먼저 거래를 추가하세요</string>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Jan"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_expend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1,6k"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_income"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="500"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_loan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="8,8k"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_borrow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="7,7k"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="15k"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black"/>
+</LinearLayout>

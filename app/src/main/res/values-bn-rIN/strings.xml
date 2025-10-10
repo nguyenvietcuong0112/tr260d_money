@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">স্মার্ট মানি টুল দিয়ে আপনার আর্থিক জীবনকে সহজ করুন।</string>
+    <string name="note_continue2">পরিষ্কার প্রতিবেদনের মাধ্যমে আপনার খরচ ও আয় দেখুন।</string>
+    <string name="note_continue3">আপনার বাজেট নিয়ন্ত্রণে রাখুন এবং সঞ্চয় বৃদ্ধি করুন।</string>
+    <string name="note_continue4">লক্ষ্য নির্ধারণ করুন, অগ্রগতি ট্র্যাক করুন এবং আর্থিক অভ্যাস গড়ে তুলুন।</string>
+
+    <string name="note_guide1">আপনার খরচ পরিচালনা করতে ‘বাজেট’ চাপুন</string>
+    <string name="note_guide2">এক নজরে আপনার অবশিষ্ট ব্যালেন্স দেখুন</string>
+    <string name="note_guide3">সহজেই বাজেটের মধ্যে পরিবর্তন করুন</string>
+    <string name="note_guide4">খরচ বিশ্লেষণ করুন এবং সঠিক পথে থাকুন</string>
+
+    <string name="budget_detail">বাজেটের বিবরণ</string>
+    <string name="add_budget">বাজেট যোগ করুন</string>
+    <string name="next">পরবর্তী</string>
+    <string name="currency_unit">মুদ্রার একক</string>
+    <string name="search">অনুসন্ধান</string>
+    <string name="add">যোগ করুন</string>
+    <string name="expense">খরচ</string>
+    <string name="income">আয়</string>
+    <string name="loan">ঋণ</string>
+    <string name="amount">পরিমাণ</string>
+    <string name="category">বিভাগ</string>
+    <string name="budget">বাজেট</string>
+    <string name="note">নোট</string>
+    <string name="add_a_description">একটি বিবরণ যোগ করুন</string>
+    <string name="select_date">তারিখ নির্বাচন করুন</string>
+    <string name="date_time">তারিখ ও সময়</string>
+    <string name="select_time">সময় নির্বাচন করুন</string>
+    <string name="interest">সুদ</string>
+    <string name="please_select_at_least_2_options_to_continue">*চালিয়ে যেতে অনুগ্রহ করে অন্তত ২টি বিকল্প নির্বাচন করুন।</string>
+    <string name="total">মোট</string>
+    <string name="please_select_language_to_continue">চালিয়ে যেতে অনুগ্রহ করে ভাষা নির্বাচন করুন</string>
+    <string name="save">সংরক্ষণ</string>
+    <string name="cancel">বাতিল</string>
+    <string name="budget_name">বাজেটের নাম</string>
+    <string name="transactions">লেনদেন</string>
+    <string name="date">তারিখ</string>
+    <string name="delete_transaction">লেনদেন মুছুন</string>
+    <string name="statistic">পরিসংখ্যান</string>
+    <string name="home">হোম</string>
+    <string name="settings">সেটিংস</string>
+    <string name="add_your_first_transaction">আপনার প্রথম লেনদেন যোগ করুন।</string>
+    <string name="total_balance">মোট ব্যালেন্স</string>
+    <string name="month">মাস</string>
+    <string name="borrow">ঋণ নিন</string>
+    <string name="balance">ব্যালেন্স</string>
+    <string name="edit">সম্পাদনা</string>
+    <string name="currency">মুদ্রা</string>
+    <string name="language">ভাষা</string>
+    <string name="share">শেয়ার</string>
+    <string name="privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="rating">রেটিং</string>
+    <string name="please_add_transaction_first">প্রথমে একটি লেনদেন যোগ করুন</string>
+
+
+</resources>

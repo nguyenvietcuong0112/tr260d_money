@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">Спрощуйте своє фінансове життя за допомогою розумних фінансових інструментів.</string>
+    <string name="note_continue2">Візуалізуйте свої витрати та доходи за допомогою чітких звітів.</string>
+    <string name="note_continue3">Тримайте бюджет під контролем і збільшуйте заощадження.</string>
+    <string name="note_continue4">Встановлюйте цілі, відстежуйте прогрес і формуйте фінансові звички.</string>
+
+    <string name="note_guide1">Торкніться ‘Бюджет’, щоб керувати своїми витратами</string>
+    <string name="note_guide2">Переглядайте залишок балансу одним поглядом</string>
+    <string name="note_guide3">Легко переключайтесь між бюджетами</string>
+    <string name="note_guide4">Аналізуйте витрати і тримайтеся плану</string>
+
+    <string name="budget_detail">Деталі бюджету</string>
+    <string name="add_budget">Додати бюджет</string>
+    <string name="next">Далі</string>
+    <string name="currency_unit">Одиниця валюти</string>
+    <string name="search">Пошук</string>
+    <string name="add">Додати</string>
+    <string name="expense">Витрати</string>
+    <string name="income">Доходи</string>
+    <string name="loan">Позика</string>
+    <string name="amount">Сума</string>
+    <string name="category">Категорія</string>
+    <string name="budget">Бюджет</string>
+    <string name="note">Примітка</string>
+    <string name="add_a_description">Додати опис</string>
+    <string name="select_date">Виберіть дату</string>
+    <string name="date_time">Дата та час</string>
+    <string name="select_time">Виберіть час</string>
+    <string name="interest">Відсоток</string>
+    <string name="please_select_at_least_2_options_to_continue">*Будь ласка, виберіть принаймні 2 варіанти, щоб продовжити.</string>
+    <string name="total">Всього</string>
+    <string name="please_select_language_to_continue">Будь ласка, виберіть мову для продовження</string>
+    <string name="save">Зберегти</string>
+    <string name="cancel">Скасувати</string>
+    <string name="budget_name">Назва бюджету</string>
+    <string name="transactions">Транзакції</string>
+    <string name="date">Дата</string>
+    <string name="delete_transaction">Видалити транзакцію</string>
+    <string name="statistic">Статистика</string>
+    <string name="home">Головна</string>
+    <string name="settings">Налаштування</string>
+    <string name="add_your_first_transaction">Додайте свою першу транзакцію.</string>
+    <string name="total_balance">Загальний баланс</string>
+    <string name="month">Місяць</string>
+    <string name="borrow">Позичити</string>
+    <string name="balance">Баланс</string>
+    <string name="edit">Редагувати</string>
+    <string name="currency">Валюта</string>
+    <string name="language">Мова</string>
+    <string name="share">Поділитися</string>
+    <string name="privacy_policy">Політика конфіденційності</string>
+    <string name="rating">Рейтинг</string>
+    <string name="please_add_transaction_first">Будь ласка, спочатку додайте транзакцію</string>
+
+
+</resources>

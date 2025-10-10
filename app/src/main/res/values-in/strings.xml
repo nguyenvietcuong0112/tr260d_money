@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Budget Planner - Save Money</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="note_continue1">Permudah hidup finansial Anda dengan alat uang pintar.</string>
+    <string name="note_continue2">Visualisasikan pengeluaran dan pemasukan dengan laporan yang jelas.</string>
+    <string name="note_continue3">Pantau anggaran Anda dan tingkatkan tabungan.</string>
+    <string name="note_continue4">Tetapkan tujuan, lacak kemajuan, dan bangun kebiasaan keuangan.</string>
+
+    <string name="note_guide1">Ketuk ‘Anggaran’ untuk mengelola pengeluaran Anda</string>
+    <string name="note_guide2">Lihat sisa saldo Anda sekilas</string>
+    <string name="note_guide3">Beralih antar anggaran dengan mudah</string>
+    <string name="note_guide4">Analisis pengeluaran dan tetap di jalur</string>
+
+    <string name="budget_detail">Detail Anggaran</string>
+    <string name="add_budget">Tambah Anggaran</string>
+    <string name="next">Berikutnya</string>
+    <string name="currency_unit">Unit mata uang</string>
+    <string name="search">Cari</string>
+    <string name="add">Tambah</string>
+    <string name="expense">Pengeluaran</string>
+    <string name="income">Pendapatan</string>
+    <string name="loan">Pinjaman</string>
+    <string name="amount">Jumlah</string>
+    <string name="category">Kategori</string>
+    <string name="budget">Anggaran</string>
+    <string name="note">Catatan</string>
+    <string name="add_a_description">Tambahkan deskripsi</string>
+    <string name="select_date">Pilih tanggal</string>
+    <string name="date_time">Tanggal dan waktu</string>
+    <string name="select_time">Pilih waktu</string>
+    <string name="interest">Bunga</string>
+    <string name="please_select_at_least_2_options_to_continue">*Silakan pilih minimal 2 opsi untuk melanjutkan.</string>
+    <string name="total">Total</string>
+    <string name="please_select_language_to_continue">Silakan pilih bahasa untuk melanjutkan</string>
+    <string name="save">Simpan</string>
+    <string name="cancel">Batal</string>
+    <string name="budget_name">Nama Anggaran</string>
+    <string name="transactions">Transaksi</string>
+    <string name="date">Tanggal</string>
+    <string name="delete_transaction">Hapus Transaksi</string>
+    <string name="statistic">Statistik</string>
+    <string name="home">Beranda</string>
+    <string name="settings">Pengaturan</string>
+    <string name="add_your_first_transaction">Tambahkan transaksi pertama Anda.</string>
+    <string name="total_balance">Saldo total</string>
+    <string name="month">Bulan</string>
+    <string name="borrow">Pinjam</string>
+    <string name="balance">Saldo</string>
+    <string name="edit">Edit</string>
+    <string name="currency">Mata uang</string>
+    <string name="language">Bahasa</string>
+    <string name="share">Bagikan</string>
+    <string name="privacy_policy">Kebijakan privasi</string>
+    <string name="rating">Penilaian</string>
+    <string name="please_add_transaction_first">Silakan tambahkan transaksi terlebih dahulu</string>
+
+
+</resources>
