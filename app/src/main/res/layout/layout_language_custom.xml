@@ -9,6 +9,7 @@
         android:paddingHorizontal="12dp">
 
         <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -17,41 +18,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- Spanish (ES) -->
                 <include
                     android:id="@+id/languageES"
                     layout="@layout/item_not_collapse"
                     android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_height="wrap_content" />
 
-                <include
-                    android:id="@+id/languageEnglishCollapse"
-                    layout="@layout/item_collapse"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_12sdp"
-                    android:layout_marginBottom="@dimen/_6sdp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcvLanguageCollap1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="true"
-                    android:orientation="vertical"
-                    android:paddingStart="@dimen/_18sdp"
-                    android:visibility="gone"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:itemCount="4"
-                    tools:listitem="@layout/item_custom_language" />
-
+                <!-- French (FR) -->
                 <include
                     android:id="@+id/languageFR"
                     layout="@layout/item_not_collapse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
+                <!-- Hindi Collapse -->
                 <include
                     android:id="@+id/languageHindi"
                     layout="@layout/item_collapse"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_12sdp"
@@ -69,10 +55,12 @@
                     tools:itemCount="4"
                     tools:listitem="@layout/item_custom_language" />
 
+                <!-- Portuguese Collapse -->
                 <include
                     android:id="@+id/languagePor"
                     layout="@layout/item_collapse"
                     android:layout_width="match_parent"
+                    android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_6sdp" />
@@ -88,6 +76,8 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:itemCount="4"
                     tools:listitem="@layout/item_custom_language" />
+
+                <!-- Other Languages -->
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcvLanguage4"
                     android:layout_width="match_parent"
@@ -97,10 +87,32 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:itemCount="4"
                     tools:listitem="@layout/item_custom_language" />
+
+                <!-- English Collapse - Moved to bottom -->
+                <include
+                    android:id="@+id/languageEnglishCollapse"
+                    layout="@layout/item_collapse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_6sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvLanguageCollap1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_18sdp"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_custom_language" />
+
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
-
 
     </RelativeLayout>
 </layout>

@@ -9,6 +9,9 @@ import android.os.Process;
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.R;
+import com.budgettracker.personalfinance.trackmoney.smartbudget.ads.ActivityFullCallback;
+import com.budgettracker.personalfinance.trackmoney.smartbudget.ads.ActivityLoadNativeFullV2;
+import com.budgettracker.personalfinance.trackmoney.smartbudget.ads.ActivityLoadNativeFullV5;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.base.BaseActivity;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.databinding.ActivitySplashBinding;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.notiSpecial.WakeService;
@@ -17,12 +20,16 @@ import com.budgettracker.personalfinance.trackmoney.smartbudget.utils.SharedClas
 import com.budgettracker.personalfinance.trackmoney.smartbudget.utils.SystemUtil;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.utils.Utils;
 import com.google.android.gms.ads.LoadAdError;
+import com.mallegan.ads.callback.AdCallback;
 import com.mallegan.ads.callback.InterCallback;
 import com.mallegan.ads.util.Admob;
+import com.mallegan.ads.util.AppOpenManager;
 import com.mallegan.ads.util.ConsentHelper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 
@@ -44,6 +51,7 @@ public class SplashActivity extends BaseActivity {
         getWindow().setFlags(1024, 1024);
 
         setContentView(activitySplashBinding.getRoot());
+//        check();
         if (Utils.checkPermissionNoty(this)) {
             startWakeService();
         }
@@ -73,7 +81,7 @@ public class SplashActivity extends BaseActivity {
         if (("uninstall_fake".equals(fromShortcut))) {
             fakeProgress2();
         } else {
-            loadAds();
+            loadAndShowOpenSplash();
         }
     }
 
@@ -99,9 +107,8 @@ public class SplashActivity extends BaseActivity {
         loadAndShowInterSplashUninstall();
     }
 
-    private void loadAds() {
-        sharePreferenceUtils = new SharePreferenceUtils(this);
-        int counterValue = sharePreferenceUtils.getCurrentValue();
+    private void loadAndShowOpenSplash() {
+        startFakeProgressLoading();
         Uri uri = getIntent().getData();
         interCallback = new InterCallback() {
             @Override
@@ -116,80 +123,96 @@ public class SplashActivity extends BaseActivity {
                         e.printStackTrace();
                     }
                 }
-
-                startActivity(new Intent(SplashActivity.this, LanguageActivity.class));
-//
+                openApp();
             }
 
-            //            @Override
-//            public void onAdClosedByUser() {
-//                super.onAdClosedByUser();
-//                if (!SharePreferenceUtils.isOrganic(SplashActivity.this) && counterValue >= 2) {
-//                    Intent intent = new Intent(SplashActivity.this, LoadNativeFull.class);
-//                    intent.putExtra(LoadNativeFull.EXTRA_NATIVE_AD_ID, getString(R.string.native_full_intro));
-//                    startActivity(intent);
-//                } else {
-//                    finish();
-//                }
-//
-//
-//            }
-        };
+            @Override
+            public void onAdClosedByUser() {
+                super.onAdClosedByUser();
+                if (Admob.getInstance().isLoadFullAds()) {
+                    ActivityLoadNativeFullV5.open(SplashActivity.this, getString(R.string.native_full_splash_high), getString(R.string.native_full_splash), () -> {
+                        openApp();
+                    });
+                } else {
+                    openApp();
+                }
 
+
+            }
+        };
         ConsentHelper consentHelper = ConsentHelper.getInstance(this);
         if (!consentHelper.canLoadAndShowAds()) {
             consentHelper.reset();
         }
         consentHelper.obtainConsentAndShow(this, () -> {
-            Admob.getInstance().loadSplashInterAds2(SplashActivity.this, getString(R.string.inter_splash), 3000, interCallback);
+            Admob.getInstance().loadSplashInterAdsFloor(SplashActivity.this,
+                    new ArrayList<>(Arrays.asList(getString(R.string.inter_splash_high), getString(R.string.inter_splash))),
+                    3000, interCallback);
         });
 
 
-        if (SharePreferenceUtils.isOrganic(this)) {
-            AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
+    }
 
-                @Override
-                public void onConversionDataSuccess(Map<String, Object> conversionData) {
-                    String mediaSource = (String) conversionData.get("media_source");
-                    SharePreferenceUtils.setOrganicValue(getApplicationContext(), mediaSource == null || mediaSource.isEmpty() || mediaSource.equals("organic"));
-                }
+    private void openApp() {
 
-                @Override
-                public void onConversionDataFail(String s) {
-                    // Handle conversion data failure
-                }
+        startActivity(new Intent(SplashActivity.this, LanguageActivity.class));
+        finish();
 
-                @Override
-                public void onAppOpenAttribution(Map<String, String> map) {
-                    // Handle app open attribution
-                }
+    }
 
-                @Override
-                public void onAttributionFailure(String s) {
-                    // Handle attribution failure
+//    private void check() {
+//        if (SharePreferenceUtils.isOrganic(this)) {
+//            AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
+//                @Override
+//                public void onConversionDataSuccess(Map<String, Object> conversionData) {
+//                    String mediaSource = (String) conversionData.get("media_source");
+//                    SharePreferenceUtils.setOrganicValue(getApplicationContext(), mediaSource == null || mediaSource.isEmpty() || "organic".equals(mediaSource));
+//                }
+//
+//                @Override
+//                public void onConversionDataFail(String s) {
+//                }
+//
+//                @Override
+//                public void onAppOpenAttribution(Map<String, String> map) {
+//                }
+//
+//                @Override
+//                public void onAttributionFailure(String s) {
+//                }
+//            });
+//        }
+//    }
+
+    private void startFakeProgressLoading() {
+        new Thread(() -> {
+            for (int i = 0; i <= 99; i++) {
+                int progress = i;
+                runOnUiThread(() -> activitySplashBinding.tvLoading.setText(progress + "%"));
+                try {
+                    Thread.sleep(120);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-            });
-        }
+            }
+        }).start();
     }
 
     private void loadAndShowInterSplashUninstall() {
-        Admob.getInstance().loadSplashInterAds2(
+        AppOpenManager.getInstance().loadOpenAppAdSplash(
                 SplashActivity.this,
-                getString(R.string.inter_splash_uninstall),
-                5000, // timeout 10s
-                new InterCallback() {
+                getString(R.string.open_splash_uninstall),
+                1000,
+                60000,
+                true,
+                new AdCallback() {
                     @Override
                     public void onNextAction() {
                         super.onNextAction();
                         isAdDone = true;
-                        checkAndGoNext();
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(LoadAdError i) {
-                        super.onAdFailedToLoad(i);
-                        isAdDone = true;
-                        checkAndGoNext();
+                        Intent intent = new Intent(SplashActivity.this, UninstallActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
                 }
         );
@@ -221,6 +244,7 @@ public class SplashActivity extends BaseActivity {
         Process.killProcess(Process.myPid());
         System.exit(0);
     }
+
     private void startWakeService() {
         try {
             Intent serviceIntent = new Intent(this, WakeService.class);

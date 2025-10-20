@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/bg_splash">
 
 
     <ImageView
@@ -13,6 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_80sdp"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/logo"
         />
@@ -24,6 +25,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logoApp"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/_3sdp"
         android:fontFamily="@font/roboto_bold"
@@ -47,9 +49,9 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:text="100%"
-            android:textColor="#6072D6"
+            android:textColor="@color/black"
             android:textSize="16sp"
-            android:visibility="visible"
+            android:visibility="gone"
             app:fontFamily="@font/roboto_bold" />
         <ProgressBar
             android:id="@+id/progressBar"
@@ -57,8 +59,8 @@
             android:layout_marginHorizontal="@dimen/_30sdp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:progressTint="@color/bubble_selected_color"
-            android:max="100"
+            android:indeterminateTint="@color/black"
+            android:progressTint="@color/black"
             android:visibility="visible" />
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"

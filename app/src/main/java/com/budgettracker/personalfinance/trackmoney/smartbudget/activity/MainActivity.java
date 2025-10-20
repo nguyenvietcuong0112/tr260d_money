@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private List<TransactionModel> transactionList;
     private boolean isFirstClick = true;
     private long lastAdTime = 0;
-    private static final long AD_COOLDOWN_PERIOD = 30000;
+    private static final long AD_COOLDOWN_PERIOD = 45000;
     private Handler handler = new Handler();
 
     private BubbleTabBar bubbleTabBar;
@@ -176,27 +176,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadAdsBanner() {
+        if (Admob.getInstance().isLoadFullAds()) {
+            Admob.getInstance().loadNativeAd(this, getString(R.string.native_banner_home), new NativeCallback() {
+                @Override
+                public void onNativeAdLoaded(NativeAd nativeAd) {
+                    super.onNativeAdLoaded(nativeAd);
+                    NativeAdView adView = (NativeAdView) LayoutInflater.from(MainActivity.this).inflate(R.layout.ad_native_admob_banner_1, null);
+                    frAdsBanner.setVisibility(View.VISIBLE);
+                    frAdsBanner.removeAllViews();
+                    frAdsBanner.addView(adView);
+                    Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
+                }
 
-        Admob.getInstance().loadNativeAd(this, getString(R.string.native_banner_home), new NativeCallback() {
-            @Override
-            public void onNativeAdLoaded(NativeAd nativeAd) {
-                super.onNativeAdLoaded(nativeAd);
-                NativeAdView adView = (NativeAdView) LayoutInflater.from(MainActivity.this).inflate(R.layout.ad_native_admob_banner_1, null);
-                frAdsBanner.setVisibility(View.VISIBLE);
-                frAdsBanner.removeAllViews();
-                frAdsBanner.addView(adView);
-                Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-            }
+                @Override
+                public void onAdFailedToLoad() {
+                    super.onAdFailedToLoad();
+                    frAdsBanner.setVisibility(View.GONE);
+                }
+            });
+        } else {
+            frAdsBanner.removeAllViews();
+            frAdsBanner.setVisibility(View.GONE);
 
-            @Override
-            public void onAdFailedToLoad() {
-                super.onAdFailedToLoad();
-                frAdsBanner.setVisibility(View.GONE);
-            }
-        });
+        }
 
 
     }
+
     private void initializeViews() {
         itemNoti = findViewById(R.id.item_Noti);
         navHome = findViewById(R.id.nav_home);
@@ -236,8 +242,8 @@ public class MainActivity extends AppCompatActivity {
 
         navAdd.setOnClickListener(v -> {
             v.setEnabled(false);
-            if (!SharePreferenceUtils.isOrganic(this)) {
-                Admob.getInstance().loadSplashInterAds2(MainActivity.this, getString(R.string.inter_navbar), 0, new InterCallback() {
+            if (Admob.getInstance().isLoadFullAds()) {
+                Admob.getInstance().loadSplashInterAds2(MainActivity.this, getString(R.string.inter_create), 0, new InterCallback() {
                     @Override
                     public void onNextAction() {
                         super.onNextAction();
@@ -249,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onAdClosedByUser() {
                         super.onAdClosedByUser();
                         startActivity(new Intent(MainActivity.this, LoadNativeFullNew.class)
-                                .putExtra(LoadNativeFullNew.EXTRA_NATIVE_AD_ID, getString(R.string.native_full_navbar)));
+                                .putExtra(LoadNativeFullNew.EXTRA_NATIVE_AD_ID, getString(R.string.native_full_create)));
                         v.setEnabled(true);
                     }
                 });
@@ -367,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleNavClick(Runnable action, View navButton) {
         long currentTime = System.currentTimeMillis();
-        if(!SharePreferenceUtils.isOrganic(this)) {
+        if (Admob.getInstance().isLoadFullAds()) {
             if (currentTime - lastAdTime > AD_COOLDOWN_PERIOD) {
                 Admob.getInstance().loadSplashInterAds2(this, getString(R.string.inter_navbar), 0, new InterCallback() {
                     @Override
@@ -392,8 +398,8 @@ public class MainActivity extends AppCompatActivity {
                 navButton.setEnabled(true);
             }
         } else {
-            action.run();
-            navButton.setEnabled(true);
+        action.run();
+        navButton.setEnabled(true);
         }
     }
 

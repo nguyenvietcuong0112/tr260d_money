@@ -87,7 +87,7 @@ public class ActivityLoadNativeFull extends BaseActivity {
                     public void run() {
                         closeButton.setVisibility(View.VISIBLE);
                     }
-                }, 5000);
+                }, 2000);
                 binding.frAdsFull.removeAllViews();
                 binding.frAdsFull.addView(adView);
                 Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);

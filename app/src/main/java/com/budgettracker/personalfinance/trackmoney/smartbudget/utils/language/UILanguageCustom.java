@@ -17,29 +17,20 @@ import java.util.ArrayList;
 
 public class UILanguageCustom extends RelativeLayout implements LanguageCustomAdapter.OnItemClickListener {
     private LanguageCustomAdapter adapterEng;
-
     private LanguageCustomAdapter adapterPor;
-
-
     private LanguageCustomAdapter adapterHindi;
-
     private LanguageCustomAdapter adapterLanguageOther;
     boolean isVisibleHindi = false;
     boolean isVisibleEng = false;
-
     boolean isVisiblePor = false;
 
     private Context context;
     private final ArrayList<LanguageModel> dataEng = new ArrayList<>();
-
     private final ArrayList<LanguageModel> dataPor = new ArrayList<>();
-
     private final ArrayList<LanguageModel> dataHindi = new ArrayList<>();
-
     private final ArrayList<LanguageModel> dataOther = new ArrayList<>();
     private OnItemClickListener onItemClickListener;
     private LayoutLanguageCustomBinding binding;
-
     private boolean isItemLanguageSelected = false;
 
     public UILanguageCustom(Context context) {
@@ -55,11 +46,8 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
     }
 
     private void initView() {
-
         binding = LayoutLanguageCustomBinding.inflate(LayoutInflater.from(context), this, true);
         binding.languageES.ivAvatar.setImageResource(R.drawable.flag_es);
-
-
         binding.languageHindi.ivAvatar.setImageResource(R.drawable.flag_hi);
 
         adapterEng = new LanguageCustomAdapter(dataEng,true);
@@ -69,7 +57,6 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
         adapterHindi = new LanguageCustomAdapter(dataHindi,false);
         adapterHindi.setOnItemClickListener(this);
         binding.rcvLanguageCollap2.setAdapter(adapterHindi);
-
 
         adapterLanguageOther = new LanguageCustomAdapter(dataOther,false);
         adapterLanguageOther.setOnItemClickListener(this);
@@ -84,6 +71,7 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
         adapterPor = new LanguageCustomAdapter(dataPor,false);
         adapterPor.setOnItemClickListener(this);
         binding.rcvLanguageCollap3.setAdapter(adapterPor);
+
         binding.languageES.llNotColap.setOnClickListener(v -> {
             binding.languageES.imgSelected.setImageResource(R.drawable.ic_checked_language);
             binding.languageFR.imgSelected.setImageResource(R.drawable.ic_unchecked_language);
@@ -96,9 +84,9 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
             if (onItemClickListener != null) {
                 onItemClickListener.onItemClickListener(0, isItemLanguageSelected, "es");
             }
-
             binding.languageEnglishCollapse.animHand.setVisibility(GONE);
         });
+
         binding.languageFR.llNotColap.setOnClickListener(v -> {
             binding.languageES.imgSelected.setImageResource(R.drawable.ic_unchecked_language);
             binding.languageFR.imgSelected.setImageResource(R.drawable.ic_checked_language);
@@ -113,6 +101,7 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
             }
             binding.languageEnglishCollapse.animHand.setVisibility(GONE);
         });
+
         binding.languageES.tvTitle.setText(context.getString(R.string.spanish));
         binding.languageHindi.tvTitle.setText(context.getString(R.string.hindi));
         binding.languageFR.tvTitle.setText(context.getString(R.string.french));
@@ -121,6 +110,7 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
         binding.languageFR.ivAvatar.setImageResource(R.drawable.flag_fr);
         binding.languagePor.ivAvatar.setImageResource(R.drawable.flag_collap_pt);
         binding.languageEnglishCollapse.ivAvatar.setImageResource(R.drawable.flag_collap_en);
+
         binding.languageHindi.itemCollap.setOnClickListener(v -> {
             isVisibleHindi = !isVisibleHindi;
             binding.rcvLanguageCollap2.setVisibility(isVisibleHindi ? View.VISIBLE : View.GONE);
@@ -129,14 +119,22 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
             }
             binding.languageEnglishCollapse.animHand.setVisibility(GONE);
         });
+
         binding.languageEnglishCollapse.itemCollap.setOnClickListener(v -> {
             isVisibleEng = !isVisibleEng;
             binding.rcvLanguageCollap1.setVisibility(isVisibleEng ? View.VISIBLE : View.GONE);
+
+            // Auto scroll to English section when expanding
+            if (isVisibleEng) {
+                binding.languageEnglishCollapse.itemCollap.postDelayed(() -> {
+                    binding.nestedScrollView.smoothScrollTo(0, binding.languageEnglishCollapse.itemCollap.getBottom());
+                }, 100);
+            }
+
             if (onItemClickListener != null) {
                 onItemClickListener.onItemClickListener(0, isItemLanguageSelected, "");
             }
             binding.languageEnglishCollapse.animHand.setVisibility(GONE);
-
         });
 
         binding.languagePor.itemCollap.setOnClickListener(v -> {
@@ -147,11 +145,10 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
             }
             binding.languageEnglishCollapse.animHand.setVisibility(GONE);
         });
-
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    public void upDateData(ArrayList<LanguageModel> dataEng1, ArrayList<LanguageModel> hindi, ArrayList<LanguageModel> dataPor1  , ArrayList<LanguageModel> dataOthe) {
+    public void upDateData(ArrayList<LanguageModel> dataEng1, ArrayList<LanguageModel> hindi, ArrayList<LanguageModel> dataPor1, ArrayList<LanguageModel> dataOthe) {
         dataPor.clear();
         dataHindi.clear();
         dataEng.clear();
@@ -177,7 +174,6 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
         adapterHindi.notifyDataSetChanged();
         adapterEng.notifyDataSetChanged();
         adapterLanguageOther.notifyDataSetChanged();
-
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -221,7 +217,6 @@ public class UILanguageCustom extends RelativeLayout implements LanguageCustomAd
 
     public interface OnItemClickListener {
         void onItemClickListener(int position, boolean isItemLanguageSelected, String codeLang);
-
         void onPreviousPosition(int pos);
     }
 }

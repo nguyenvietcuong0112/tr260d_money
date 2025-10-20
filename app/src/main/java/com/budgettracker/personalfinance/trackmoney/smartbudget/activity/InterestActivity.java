@@ -34,7 +34,7 @@ public class InterestActivity  extends BaseActivity {
         SystemConfiguration.setStatusBarColor(this, R.color.transparent, SystemConfiguration.IconColor.ICON_DARK);
         binding = ActivityInterestBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        if (SharePreferenceUtils.isOrganic(this)) {
+        if (!Admob.getInstance().isLoadFullAds()) {
             AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
 
                 @Override
@@ -68,7 +68,7 @@ public class InterestActivity  extends BaseActivity {
 
     public void loadAdsNativeLanguageSelect() {
         NativeAdView adView;
-        if (SharePreferenceUtils.isOrganic(this)) {
+        if (!Admob.getInstance().isLoadFullAds()) {
             adView = (NativeAdView) LayoutInflater.from(this)
                     .inflate(R.layout.layout_native_language, null);
         } else {
@@ -102,7 +102,7 @@ public class InterestActivity  extends BaseActivity {
             public void onNativeAdLoaded(NativeAd nativeAd) {
                 super.onNativeAdLoaded(nativeAd);
                 NativeAdView adView = new NativeAdView(InterestActivity.this);
-                if (!SharePreferenceUtils.isOrganic(InterestActivity.this)) {
+                if (Admob.getInstance().isLoadFullAds()) {
                     adView = (NativeAdView) LayoutInflater.from(InterestActivity.this).inflate(R.layout.layout_native_language_non_organic, null);
                 } else {
                     adView = (NativeAdView) LayoutInflater.from(InterestActivity.this).inflate(R.layout.layout_native_language, null);

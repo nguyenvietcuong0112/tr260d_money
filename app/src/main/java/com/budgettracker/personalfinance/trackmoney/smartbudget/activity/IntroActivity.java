@@ -58,21 +58,9 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
         loadNativeIntro2();
         loadNative3();
         loadNative4();
-        loadBanner();
 
     }
 
-    private void loadBanner() {
-        if (!SharePreferenceUtils.isOrganic(this)) {
-            Admob.getInstance().loadCollapsibleBanner(
-                    this,
-                    getString(R.string.banner_collapse_intro),
-                    "top"
-            );
-        } else {
-            binding.llBanner.removeAllViews();
-        }
-    }
 
     @Override
     public void onClick(View v) {
@@ -82,20 +70,74 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
 
                 new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
             } else if (binding.viewPager2.getCurrentItem() == 2) {
-                binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
-                if (!SharePreferenceUtils.isOrganic(this)) {
-                    checkNextButtonStatus(false);
-                    new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                if (Admob.getInstance().isLoadFullAds()) {
+                    Admob.getInstance().loadAndShowInter(IntroActivity.this, getString(R.string.inter_intro3), 0, 30000, new InterCallback() {
+
+                        @Override
+                        public void onAdFailedToLoad(LoadAdError i) {
+                            super.onAdFailedToLoad(i);
+                            binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                            if (Admob.getInstance().isLoadFullAds()) {
+                                checkNextButtonStatus(false);
+                                new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                            }
+                        }
+
+                        @Override
+                        public void onAdClosed() {
+                            super.onAdClosed();
+                            binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                            if (Admob.getInstance().isLoadFullAds()) {
+                                checkNextButtonStatus(false);
+                                new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                            }
+                        }
+                    });
+                } else {
+                    binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                    if (Admob.getInstance().isLoadFullAds()) {
+                        checkNextButtonStatus(false);
+                        new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                    }
+
                 }
+
             } else if (binding.viewPager2.getCurrentItem() == 1) {
-                binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
-                if (!SharePreferenceUtils.isOrganic(this)) {
-                    checkNextButtonStatus(false);
-                    new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                if (Admob.getInstance().isLoadFullAds()) {
+                    Admob.getInstance().loadAndShowInter(IntroActivity.this, getString(R.string.inter_intro2), 0, 30000, new InterCallback() {
+
+                        @Override
+                        public void onAdFailedToLoad(LoadAdError i) {
+                            super.onAdFailedToLoad(i);
+                            binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                            if (Admob.getInstance().isLoadFullAds()) {
+                                checkNextButtonStatus(false);
+                                new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                            }
+                        }
+
+                        @Override
+                        public void onAdClosed() {
+                            super.onAdClosed();
+                            binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                            if (Admob.getInstance().isLoadFullAds()) {
+                                checkNextButtonStatus(false);
+                                new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                            }
+                        }
+                    });
+                } else {
+                    binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
+                    if (Admob.getInstance().isLoadFullAds()) {
+                        checkNextButtonStatus(false);
+                        new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
+                    }
+
                 }
+
             } else if (binding.viewPager2.getCurrentItem() == 0) {
                 binding.viewPager2.setCurrentItem(binding.viewPager2.getCurrentItem() + 1);
-                if (!SharePreferenceUtils.isOrganic(this)) {
+                if (Admob.getInstance().isLoadFullAds()) {
                     checkNextButtonStatus(false);
                     new Handler().postDelayed(() -> checkNextButtonStatus(true), 1500);
                 }
@@ -119,16 +161,16 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
 
     public void goToHome() {
         String selectedCurrencyCode = SharePreferenceUtils.getSelectedCurrencyCode(this);
-        if (!SharePreferenceUtils.isOrganic(IntroActivity.this)) {
+        if (Admob.getInstance().isLoadFullAds()) {
             Admob.getInstance().loadAndShowInter(IntroActivity.this, getString(R.string.inter_intro), 0, 30000, new InterCallback() {
 
                 @Override
                 public void onAdFailedToLoad(LoadAdError i) {
                     super.onAdFailedToLoad(i);
                     ActivityLoadNativeFullV2.open(IntroActivity.this, getString(R.string.native_full_intro), () -> {
-                        if (selectedCurrencyCode.isEmpty()){
+                        if (selectedCurrencyCode.isEmpty()) {
                             startActivity(new Intent(IntroActivity.this, CurrencyUnitActivity.class));
-                        }else {
+                        } else {
                             Intent intent = new Intent(IntroActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
@@ -139,9 +181,9 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
                 public void onAdClosed() {
                     super.onAdClosed();
                     ActivityLoadNativeFullV2.open(IntroActivity.this, getString(R.string.native_full_intro), () -> {
-                        if (selectedCurrencyCode.isEmpty()){
+                        if (selectedCurrencyCode.isEmpty()) {
                             startActivity(new Intent(IntroActivity.this, CurrencyUnitActivity.class));
-                        }else {
+                        } else {
                             Intent intent = new Intent(IntroActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
@@ -149,9 +191,9 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
                 }
             });
         } else {
-            if (selectedCurrencyCode.isEmpty()){
+            if (selectedCurrencyCode.isEmpty()) {
                 startActivity(new Intent(IntroActivity.this, CurrencyUnitActivity.class));
-            }else {
+            } else {
                 Intent intent = new Intent(IntroActivity.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -313,7 +355,7 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
             public void onNativeAdLoaded(NativeAd nativeAd) {
                 super.onNativeAdLoaded(nativeAd);
                 NativeAdView adView;
-                if (SharePreferenceUtils.isOrganic(IntroActivity.this)) {
+                if (!Admob.getInstance().isLoadFullAds()) {
                     adView = (NativeAdView) LayoutInflater.from(IntroActivity.this)
                             .inflate(R.layout.layout_native_language, null);
                 } else {
@@ -341,44 +383,38 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void loadNative3() {
-        if (!SharePreferenceUtils.isOrganic(IntroActivity.this)) {
-            checkNextButtonStatus(false);
-            Admob.getInstance().loadNativeAd(this, getString(R.string.native_onboarding3), new NativeCallback() {
-                @Override
-                public void onNativeAdLoaded(NativeAd nativeAd) {
-                    super.onNativeAdLoaded(nativeAd);
-                    runOnUiThread(() -> {
-                        NativeAdView adView = (NativeAdView) LayoutInflater.from(IntroActivity.this).inflate(R.layout.layout_native_introthree_non_organic, null);
-                        binding.frAds3.removeAllViews();
-                        binding.frAds3.addView(adView);
-                        loadNative3 = true;
-                        Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-                        new Handler().postDelayed(() -> {
-                            checkNextButtonStatus(true);
-                        }, 500);
-                    });
-                }
+        checkNextButtonStatus(false);
+        Admob.getInstance().loadNativeAd(this, getString(R.string.native_onboarding3), new NativeCallback() {
+            @Override
+            public void onAdFailedToLoad() {
+                super.onAdFailedToLoad();
+                binding.frAds3.setVisibility(View.GONE);
+                loadNative3 = false;
+                checkNextButtonStatus(true);
+            }
 
-                @Override
-                public void onAdFailedToLoad() {
-                    super.onAdFailedToLoad();
-                    runOnUiThread(() -> {
-                        loadNative3 = true;
-                        binding.frAds3.setVisibility(View.GONE);
-                        checkNextButtonStatus(true);
-                    });
+            @Override
+            public void onNativeAdLoaded(NativeAd nativeAd) {
+                super.onNativeAdLoaded(nativeAd);
+                NativeAdView adView;
+                if (!Admob.getInstance().isLoadFullAds()) {
+                    adView = (NativeAdView) LayoutInflater.from(IntroActivity.this)
+                            .inflate(R.layout.layout_native_language, null);
+                } else {
+                    adView = (NativeAdView) LayoutInflater.from(IntroActivity.this)
+                            .inflate(R.layout.layout_native_language_non_organic, null);
                 }
-
-            });
-        } else {
-            loadNative3 = false;
-            binding.frAds3.removeAllViews();
-            binding.frAds3.setVisibility(View.GONE);
-        }
+                loadNative3 = true;
+                binding.frAds3.removeAllViews();
+                binding.frAds3.addView(adView);
+                Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
+                checkNextButtonStatus(true);
+            }
+        });
     }
 
     private void loadNativeIntro2() {
-        if (!SharePreferenceUtils.isOrganic(IntroActivity.this)) {
+        if (Admob.getInstance().isLoadFullAds()) {
             checkNextButtonStatus(false);
             Admob.getInstance().loadNativeAd(this, getString(R.string.native_onboarding2), new NativeCallback() {
                 @Override
@@ -417,42 +453,42 @@ public class IntroActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void loadNative4() {
-        checkNextButtonStatus(false);
-        Admob.getInstance().loadNativeAd(this, getString(R.string.native_onboarding4), new NativeCallback() {
-            @Override
-            public void onAdFailedToLoad() {
-                super.onAdFailedToLoad();
-                runOnUiThread(() -> {
-                    loadNative4 = false;
-                    binding.frAds4.removeAllViews();
-                    binding.frAds4.setVisibility(View.GONE);
-                    checkNextButtonStatus(true);
-                });
-
-            }
-
-            @Override
-            public void onNativeAdLoaded(NativeAd nativeAd) {
-                super.onNativeAdLoaded(nativeAd);
-                NativeAdView adView;
-                if (SharePreferenceUtils.isOrganic(IntroActivity.this)) {
-                    adView = (NativeAdView) LayoutInflater.from(IntroActivity.this)
-                            .inflate(R.layout.layout_native_language, null);
-                } else {
-                    adView = (NativeAdView) LayoutInflater.from(IntroActivity.this)
-                            .inflate(R.layout.layout_native_language_non_organic, null);
-                }
-                runOnUiThread(() -> {
-                    loadNative4 = true;
-                    binding.frAds4.removeAllViews();
-                    binding.frAds4.addView(adView);
-                    Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-                    new Handler().postDelayed(() -> {
+        if (Admob.getInstance().isLoadFullAds()) {
+            checkNextButtonStatus(false);
+            Admob.getInstance().loadNativeAd(this, getString(R.string.native_onboarding4), new NativeCallback() {
+                @Override
+                public void onAdFailedToLoad() {
+                    super.onAdFailedToLoad();
+                    runOnUiThread(() -> {
+                        binding.frAds4.removeAllViews();
+                        binding.frAds4.setVisibility(View.GONE);
+                        loadNative4 = false;
                         checkNextButtonStatus(true);
-                    }, 500);
-                });
-            }
-        });
+                    });
+
+                }
+
+                @Override
+                public void onNativeAdLoaded(NativeAd nativeAd) {
+                    super.onNativeAdLoaded(nativeAd);
+                    runOnUiThread(() -> {
+                        NativeAdView adView = (NativeAdView) LayoutInflater.from(IntroActivity.this).inflate(R.layout.layout_native_introtwo_non_organic, null);
+                        binding.frAds4.removeAllViews();
+                        binding.frAds4.addView(adView);
+                        loadNative4 = true;
+                        Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
+                        new Handler().postDelayed(() -> {
+                            checkNextButtonStatus(true);
+                        }, 500);
+                    });
+
+                }
+            });
+        } else {
+            loadNative4 = false;
+            binding.frAds4.removeAllViews();
+            binding.frAds4.setVisibility(View.GONE);
+        }
 
     }
 

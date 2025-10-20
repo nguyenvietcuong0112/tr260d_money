@@ -40,6 +40,11 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".activity.SetBudgetActivity"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".activity.InterestActivity"
             android:theme="@style/Theme.Design.NoActionBar"
             android:screenOrientation="portrait" />
@@ -85,6 +90,10 @@
             android:theme="@style/Theme.Design.NoActionBar"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ads.ActivityLoadNativeFullV5"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.StatisticDetailActivity"
             android:theme="@style/Theme.Design.NoActionBar"
             android:screenOrientation="portrait" />
@@ -95,12 +104,6 @@
             android:name=".activity.ActivityLoadNativeFull"
             android:theme="@style/Theme.Design.NoActionBar"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".utils.LoadNativeFull"
-            android:theme="@style/Theme.Design.NoActionBar"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-
         <activity
             android:name=".notiSpecial.ProDocsSplashNotiActivity"
             android:theme="@style/Theme.Design.NoActionBar"

@@ -72,29 +72,30 @@ public class BudgetDetailActivity extends AppCompatActivity {
     }
 
     private void loadAds() {
-        Admob.getInstance().loadNativeAd(this, getString(R.string.native_budget_detail), new NativeCallback() {
-            @Override
-            public void onNativeAdLoaded(NativeAd nativeAd) {
-                super.onNativeAdLoaded(nativeAd);
-                NativeAdView adView;
-                if (SharePreferenceUtils.isOrganic(BudgetDetailActivity.this)) {
-                    adView = (NativeAdView) LayoutInflater.from(BudgetDetailActivity.this)
-                            .inflate(R.layout.layout_native_language, null);
-                } else {
-                    adView = (NativeAdView) LayoutInflater.from(BudgetDetailActivity.this)
-                            .inflate(R.layout.layout_native_language_non_organic, null);
+            Admob.getInstance().loadNativeAd(this, getString(R.string.native_budget_detail), new NativeCallback() {
+                @Override
+                public void onNativeAdLoaded(NativeAd nativeAd) {
+                    super.onNativeAdLoaded(nativeAd);
+                    NativeAdView adView;
+                    if (!Admob.getInstance().isLoadFullAds()) {
+                        adView = (NativeAdView) LayoutInflater.from(BudgetDetailActivity.this)
+                                .inflate(R.layout.layout_native_language, null);
+                    } else {
+                        adView = (NativeAdView) LayoutInflater.from(BudgetDetailActivity.this)
+                                .inflate(R.layout.layout_native_language_non_organic, null);
+                    }
+                    frAds.removeAllViews();
+                    frAds.addView(adView);
+                    Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
                 }
-                frAds.removeAllViews();
-                frAds.addView(adView);
-                Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-            }
 
-            @Override
-            public void onAdFailedToLoad() {
-                super.onAdFailedToLoad();
-                frAds.setVisibility(View.GONE);
-            }
-        });
+                @Override
+                public void onAdFailedToLoad() {
+                    super.onAdFailedToLoad();
+                    frAds.setVisibility(View.GONE);
+                }
+            });
+
 
 
     }

@@ -54,30 +54,6 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <FrameLayout
-        android:id="@+id/frAdsCollap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/ll_transaction_tabs"
-        app:layout_constraintTop_toBottomOf="@+id/view_header_bg">
-
-
-        <include layout="@layout/ads_shimmer_native_no_media" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frAdsHomeTop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/ll_transaction_tabs"
-        app:layout_constraintTop_toBottomOf="@+id/view_header_bg">
-
-    </FrameLayout>
-
     <LinearLayout
         android:id="@+id/ll_transaction_tabs"
         android:layout_width="match_parent"
@@ -86,7 +62,8 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frAdsHomeTop">
+        app:layout_constraintTop_toBottomOf="@id/view_header_bg"
+        >
 
         <LinearLayout
             android:id="@+id/ll_expend"
@@ -172,7 +149,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/ll_loan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -215,13 +191,34 @@
         </LinearLayout>
     </LinearLayout>
 
+    <FrameLayout
+        android:id="@+id/fr_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/bg_ads_native"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/listview"
+        app:layout_constraintTop_toBottomOf="@+id/ll_transaction_tabs"
+        >
+
+        <RelativeLayout
+            android:id="@+id/shimmer_native_language"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/ads_shimmer_native_home" />
+        </RelativeLayout>
+    </FrameLayout>
+
     <ScrollView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_5sdp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll_transaction_tabs">
+        app:layout_constraintTop_toBottomOf="@id/fr_ads">
 
         <LinearLayout
             android:layout_width="match_parent"

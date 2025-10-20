@@ -85,21 +85,7 @@ public class HomeFragment extends Fragment {
     private boolean isFirstLoad = true;
 
 
-    FrameLayout frAdsHomeTop;
-
-    FrameLayout frAdsCollap;
-
-    private final Handler handler = new Handler(Looper.getMainLooper());
-    private Runnable delayedLoadExpandTask;
-
-    private Runnable loadTask = new Runnable() {
-        @Override
-        public void run() {
-            loadNativeExpnad();
-            handler.postDelayed(this, 10000);
-        }
-    };
-
+    FrameLayout fr_ads;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -133,8 +119,7 @@ public class HomeFragment extends Fragment {
         rvTransactions = view.findViewById(R.id.rv_transactions);
         ivEditBalance = view.findViewById(R.id.iv_edit_balance);
         noDataView = view.findViewById(R.id.layout_no_data);
-        frAdsHomeTop = view.findViewById(R.id.frAdsHomeTop);
-        frAdsCollap = view.findViewById(R.id.frAdsCollap);
+        fr_ads = view.findViewById(R.id.fr_ads);
         llBanner = view.findViewById(R.id.ll_banner);
 //        frAds = view.findViewById(R.id.frAds);
 
@@ -290,7 +275,7 @@ public class HomeFragment extends Fragment {
         ImageView ivLoan = llLoan.findViewById(R.id.iv_loan);
         TextView tvLoanLabel = llLoan.findViewById(R.id.tv_loan_label);
 
-        int colorActive = getResources().getColor(R.color.purple);
+        int colorActive = getResources().getColor(R.color.black);
         int colorInactive = getResources().getColor(R.color.icon_inactive);
 
         ivExpend.setColorFilter(currentTransactionType.equals("Expense") ? colorActive : colorInactive);
@@ -619,122 +604,53 @@ public class HomeFragment extends Fragment {
         updateTotalAmount();
         regularAdapter.notifyDataSetChanged();
         loanAdapter.notifyDataSetChanged();
-
-        if (!SharePreferenceUtils.isOrganic(requireContext())) {
-            if (isFirstLoad) {
-                loadNativeCollap(() -> {
-                    delayedLoadExpandTask = new Runnable() {
-                        @Override
-                        public void run() {
-                            loadNativeExpnad();
-                            isFirstLoad = false;
-                        }
-                    };
-                    handler.postDelayed(delayedLoadExpandTask, 1000);
-                });
-            } else {
-                loadNativeCollap(() -> {
-                    delayedLoadExpandTask = new Runnable() {
-                        @Override
-                        public void run() {
-                            loadNativeExpnad();
-                        }
-                    };
-                    handler.postDelayed(delayedLoadExpandTask, 10000);
-                });
-            }
-        } else {
-            frAdsCollap.removeAllViews();
-            frAdsHomeTop.removeAllViews();
-        }
+        loadNative();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        handler.removeCallbacks(loadTask);
-        if (delayedLoadExpandTask != null) {
-            handler.removeCallbacks(delayedLoadExpandTask);
-            delayedLoadExpandTask = null;
-        }
+
     }
 
 
-    private void loadNativeCollap(@Nullable final Runnable onLoaded) {
-        if (!isAdded() || getContext() == null) return;
-
-        if (frAdsHomeTop != null) {
-            frAdsHomeTop.removeAllViews();
-        }
-
-        Admob.getInstance().loadNativeAd(requireContext(), getString(R.string.native_collap_home), new NativeCallback() {
-            @Override
-            public void onNativeAdLoaded(NativeAd nativeAd) {
-                if (getContext() == null || !isAdded() || nativeAd == null) {
-                    return;
-                }
-
-                NativeAdView adView = (NativeAdView) LayoutInflater.from(requireContext()).inflate(R.layout.layout_native_home_collap, null);
-                if (frAdsCollap != null) {
-                    frAdsCollap.removeAllViews();
-                    frAdsCollap.addView(adView);
-                    Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-                }
-
-                if (onLoaded != null) {
-                    onLoaded.run();
-                }
-            }
-
-            @Override
-            public void onAdFailedToLoad() {
-                if (!isAdded() || getContext() == null) return;
-
-                if (frAdsCollap != null) {
-                    frAdsCollap.removeAllViews();
-                }
-
-                if (onLoaded != null) {
-                    onLoaded.run();
-                }
-            }
-        });
-    }
-
-    private void loadNativeExpnad() {
+    private void loadNative() {
         if (!isAdded()) return;
 
-        Log.d("homefragggggggggg", "loadNativeCollapB: ");
-        Context context = requireContext();
+        if (fr_ads != null) {
+            fr_ads.removeAllViews();
+        }
+        if (Admob.getInstance().isLoadFullAds()) {
+            Admob.getInstance().loadNativeAd(requireContext(), getString(R.string.native_home), new NativeCallback() {
+                @Override
+                public void onNativeAdLoaded(NativeAd nativeAd) {
+                    if (getContext() == null || !isAdded() || nativeAd == null) {
+                        return;
+                    }
 
-        Admob.getInstance().loadNativeAd(context, getString(R.string.native_expand_home), new NativeCallback() {
-            @Override
-            public void onNativeAdLoaded(NativeAd nativeAd) {
-                if (!isAdded()) return;
+                    NativeAdView adView = (NativeAdView) LayoutInflater.from(requireContext()).inflate(R.layout.layout_native_home, null);
+                    if (fr_ads != null) {
+                        fr_ads.removeAllViews();
+                        fr_ads.addView(adView);
+                        Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
+                    }
 
-                Context context = requireContext();
-                NativeAdView adView = (NativeAdView) LayoutInflater.from(context).inflate(R.layout.layout_native_home_expnad, null);
-
-                frAdsHomeTop.removeAllViews();
-
-                MediaView mediaView = adView.findViewById(R.id.ad_media);
-                ImageView closeButton = adView.findViewById(R.id.close);
-                closeButton.setOnClickListener(v -> {
-                    mediaView.performClick();
-                });
-
-                Log.d("Truong", "onNativeAdLoaded: ");
-                frAdsHomeTop.addView(adView);
-                Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-            }
-
-            @Override
-            public void onAdFailedToLoad() {
-                if (isAdded()) {
-                    frAdsHomeTop.removeAllViews();
                 }
-            }
-        });
+
+                @Override
+                public void onAdFailedToLoad() {
+                    if (!isAdded() || getContext() == null) return;
+
+                    if (fr_ads != null) {
+                        fr_ads.removeAllViews();
+                    }
+
+                }
+            });
+        } else {
+            fr_ads.removeAllViews();
+            fr_ads.setVisibility(View.GONE);
+        }
     }
 
     @Override

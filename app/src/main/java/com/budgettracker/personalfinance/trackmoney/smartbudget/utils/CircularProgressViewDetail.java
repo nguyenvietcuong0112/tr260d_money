@@ -13,7 +13,7 @@ public class CircularProgressViewDetail extends View {
     private RectF rectF;
     private int progress = 75;
     private int progressColor = Color.parseColor("#BFF3C9");
-    private int colorPaint = Color.parseColor("#F3F3F3");
+    private int colorPaint = Color.parseColor("#DADADA");
 
     private boolean showRemainingText = true;
 
@@ -62,7 +62,7 @@ public class CircularProgressViewDetail extends View {
             canvas.drawText("Remaining", getWidth() / 2, getHeight() / 2 - 5, textPaint);
             canvas.drawText(progress + "%", getWidth() / 2, getHeight() / 2 + 20, textPaint);
         } else {
-            textPaint.setTextSize(40f);
+            textPaint.setTextSize(20f);
             paint.setStrokeWidth(20f);
             textPaint.setColor(Color.parseColor("#1F2124"));
             canvas.drawText(progress + "%", getWidth() / 2, getHeight() / 2 + 20, textPaint);

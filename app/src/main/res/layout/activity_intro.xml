@@ -22,33 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/ad_card_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardElevation="2dp">
-
-        <LinearLayout
-            android:id="@+id/ll_banner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/llToolbar"
-
-            >
-
-            <include
-                android:id="@+id/banner"
-                layout="@layout/layout_banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/btn_back"

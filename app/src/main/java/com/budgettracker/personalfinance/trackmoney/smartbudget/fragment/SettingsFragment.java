@@ -62,38 +62,9 @@ public class SettingsFragment extends Fragment {
         tvCurrency.setText(currentCurrency);
 
         updateCurrencyDisplay();
-        loadAds();
     }
 
-    private void loadAds() {
-        if (!SharePreferenceUtils.isOrganic(requireContext())) {
-            Admob.getInstance().loadNativeAd(requireContext(), getString(R.string.native_settings), new NativeCallback() {
-                @Override
-                public void onNativeAdLoaded(NativeAd nativeAd) {
-                    super.onNativeAdLoaded(nativeAd);
-                    if (!isAdded() || getActivity() == null) return;
 
-                    NativeAdView adView = (NativeAdView) LayoutInflater.from(getActivity())
-                            .inflate(R.layout.ad_native_admob_banner_3, null);
-
-                    frAds.removeAllViews();
-                    frAds.addView(adView);
-                    Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-                }
-
-                @Override
-                public void onAdFailedToLoad() {
-                    super.onAdFailedToLoad();
-                    frAds.setVisibility(View.GONE);
-                }
-            });
-
-        } else {
-            frAds.removeAllViews();
-        }
-
-
-    }
     private void setupClickListeners() {
         btnShare.setOnClickListener(v -> {
             if (isBtnProcessing) return;
@@ -136,7 +107,7 @@ public class SettingsFragment extends Fragment {
 
 
         btnPrivacyPolicy.setOnClickListener(v -> {
-            Uri uri = Uri.parse("https://2nd-chance-farms.vercel.app/policy");
+            Uri uri = Uri.parse("https://starmoontradingltd.vercel.app/policy");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         });

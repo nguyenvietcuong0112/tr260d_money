@@ -55,7 +55,7 @@
             <com.google.android.gms.ads.nativead.MediaView
                 android:id="@+id/ad_media"
                 android:layout_width="fill_parent"
-                android:layout_height="100dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_weight="1"
@@ -65,10 +65,10 @@
             <Button
                 android:id="@+id/ad_call_to_action"
                 android:layout_width="fill_parent"
-                android:layout_height="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
                 android:background="@drawable/bg_button_ads_shimmer"
                 android:gravity="center"
                 android:textColor="@color/colorWhite"

@@ -1,10 +1,13 @@
 package com.budgettracker.personalfinance.trackmoney.smartbudget.activity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
 
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
@@ -22,6 +25,8 @@ import com.budgettracker.personalfinance.trackmoney.smartbudget.base.BaseActivit
 import com.budgettracker.personalfinance.trackmoney.smartbudget.databinding.ActivityLanguageBinding;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.Map;
 
@@ -41,51 +46,11 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
         setContentView(binding.getRoot());
         boolean fromSettings = getIntent().getBooleanExtra("from_settings", false);
 
-        if (SharePreferenceUtils.isOrganic(this)) {
-            AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
-
-                @Override
-                public void onConversionDataSuccess(Map<String, Object> conversionData) {
-                    String mediaSource = (String) conversionData.get("media_source");
-                    String campaignName = (String) conversionData.get("campaign");
-
-                    boolean isOrganic = mediaSource == null || mediaSource.isEmpty() || mediaSource.equals("organic");
-                    SharePreferenceUtils.setOrganicValue(getApplicationContext(), isOrganic);
-
-                  /*  String uuid = UserUidUtils.generateUserUuid(getApplicationContext());
-
-                    if (!isOrganic) {
-                        DatabaseReference refUsers = FirebaseDatabase.getInstance()
-                                .getReference()
-                                .child("usersnew")
-                                .child(uuid);
-                        Map<String, Object> userHashmap = new HashMap<>(conversionData);
-                        refUsers.updateChildren(userHashmap);
-                    }*/
-                }
-
-                @Override
-                public void onConversionDataFail(String s) {
-                    // Handle conversion data failure
-                }
-
-                @Override
-                public void onAppOpenAttribution(Map<String, String> map) {
-                    // Handle app open attribution
-                }
-
-                @Override
-                public void onAttributionFailure(String s) {
-                    // Handle attribution failure
-                }
-            });
-        }
-
-        if (fromSettings) {
-//            binding.ivBack.setVisibility(View.VISIBLE);
-            binding.frAds.setVisibility(View.GONE);
-
-        }
+//        if (fromSettings) {
+////            binding.ivBack.setVisibility(View.VISIBLE);
+//            binding.frAds.setVisibility(View.GONE);
+//
+//        }
         binding.ivBack.setOnClickListener(v -> {
             finish();
         });
@@ -93,12 +58,13 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
         setUpLayoutLanguage();
 
         binding.ivSelect.setOnClickListener(v -> {
+            binding.ivSelect.setEnabled(false);
             if (itemSelected) {
                 SystemUtil.saveLocale(this, codeLang);
                 if (fromSettings) {
                     finish();
                 } else {
-                    if (!SharePreferenceUtils.isOrganic(LanguageActivity.this)) {
+                    if (Admob.getInstance().isLoadFullAds()) {
                         startActivity(new Intent(LanguageActivity.this, ActivityLoadNativeFull.class));
                         finish();
                     } else {
@@ -141,8 +107,8 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
             public void onNativeAdLoaded(NativeAd nativeAd) {
                 super.onNativeAdLoaded(nativeAd);
                 NativeAdView adView = new NativeAdView(LanguageActivity.this);
-                if (!SharePreferenceUtils.isOrganic(LanguageActivity.this)) {
-                    adView = (NativeAdView) LayoutInflater.from(LanguageActivity.this).inflate(R.layout.layout_native_language_non_organic, null);
+                if (Admob.getInstance().isLoadFullAds()) {
+                    adView = (NativeAdView) LayoutInflater.from(LanguageActivity.this).inflate(R.layout.layout_native_language_non_organic_button_opacity, null);
                 } else {
                     adView = (NativeAdView) LayoutInflater.from(LanguageActivity.this).inflate(R.layout.layout_native_language, null);
                 }
@@ -164,14 +130,14 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
 
     public void loadAdsNativeLanguageSelect() {
         NativeAdView adView;
-        if (SharePreferenceUtils.isOrganic(this)) {
+        if (!Admob.getInstance().isLoadFullAds()) {
             adView = (NativeAdView) LayoutInflater.from(this).inflate(R.layout.layout_native_language, null);
         } else {
             adView = (NativeAdView) LayoutInflater.from(this).inflate(R.layout.layout_native_language_non_organic, null);
         }
         checkNextButtonStatus(false);
 
-        Admob.getInstance().loadNativeAd(LanguageActivity.this, getString(R.string.native_language_select), new NativeCallback() {
+        Admob.getInstance().loadNativeAdFloor(LanguageActivity.this, new ArrayList<>(Arrays.asList(getString(R.string.native_language_select_high), getString(R.string.native_language_select))), new NativeCallback() {
             @Override
             public void onNativeAdLoaded(NativeAd nativeAd) {
                 binding.frAds.removeAllViews();
@@ -210,6 +176,8 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
         this.itemSelected = itemseleted;
         if (itemseleted) {
             binding.ivSelect.setAlpha(1.0f);
+            binding.ivSelect.setImageTintList(ColorStateList.valueOf(
+                    ContextCompat.getColor(this, R.color.white)));
         }
         loadAdsNativeLanguageSelect();
     }
@@ -229,5 +197,10 @@ public class LanguageActivity extends BaseActivity implements UILanguageCustom.O
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        binding.ivSelect.setEnabled(true);
 
+    }
 }

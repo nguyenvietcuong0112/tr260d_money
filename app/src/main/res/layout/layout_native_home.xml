@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#F6F7F9"
+    android:background="#E4FFFA"
     android:layout_height="wrap_content">
 
     <RelativeLayout
@@ -9,6 +9,7 @@
         android:id="@+id/ad_unit_content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -17,6 +18,18 @@
             android:paddingHorizontal="1dp"
             android:orientation="vertical">
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/bg_button_ads_home"
+                android:id="@+id/ad_call_to_action"
+                android:layout_width="fill_parent"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Install"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                />
 
             <LinearLayout
                 android:paddingBottom="@dimen/_5sdp"
@@ -75,19 +88,7 @@
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:background="@drawable/bg_button_ads_home"
-                    android:id="@+id/ad_call_to_action"
-                    android:layout_width="fill_parent"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginHorizontal="@dimen/_5sdp"
-                    android:layout_height="@dimen/_45sdp"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="center"
-                    android:text="Install"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="22sp"
-                   />
+
             </LinearLayout>
 
         </LinearLayout>

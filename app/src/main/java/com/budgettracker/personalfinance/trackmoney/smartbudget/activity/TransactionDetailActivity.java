@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,8 +28,9 @@ import java.util.List;
 import java.util.Locale;
 
 public class TransactionDetailActivity extends AppCompatActivity {
-    private TextView tvDate, tvAmount, tvCategory, tvNote, tvTransactionType, tvEdit;
+    private TextView tvDate, tvAmount, tvCategory, tvNote, tvTransactionType;
     private LinearLayout btnDelete;
+    ImageView tvEdit;
     private ImageButton btnBack;
     private TransactionModel transaction;
     private FrameLayout frAds;
@@ -77,8 +79,7 @@ public class TransactionDetailActivity extends AppCompatActivity {
     }
 
     private void loadAds() {
-        if (!SharePreferenceUtils.isOrganic(this)) {
-            Admob.getInstance().loadNativeAd(this, getString(R.string.native_detail_transaction), new NativeCallback() {
+            Admob.getInstance().loadNativeAd(this, getString(R.string.native_all), new NativeCallback() {
                 @Override
                 public void onNativeAdLoaded(NativeAd nativeAd) {
                     super.onNativeAdLoaded(nativeAd);
@@ -97,10 +98,6 @@ public class TransactionDetailActivity extends AppCompatActivity {
                     frAds.setVisibility(View.GONE);
                 }
             });
-        } else {
-            frAds.setVisibility(View.GONE);
-            frAds.removeAllViews();
-        }
 
 
     }

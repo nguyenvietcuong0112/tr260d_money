@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Budget Planner - Save Money</string>
+    <string name="app_name">Smart Budget: Money Tracker</string>
 
     <string-array name="months">
         <item>January</item>
@@ -82,6 +82,9 @@
     <string name="germany">German(Deutsch)</string>
     <string name="hindi">Hindi(हिन्दी)</string>
     <string name="indonesia">Indonesia(Bahasa Indonesia)</string>
+    <string name="thailand">Thailand(ภาษาไทย)</string>
+    <string name="philippines">Philippines(Filipino)</string>
+    <string name="nigeria">Nigeria(English)</string>
     <string name="japan">Japanese(日本語 )</string>
     <string name="korea">Korea(한국어)</string>
     <string name="portuguese">Portuguese(Português)</string>
@@ -185,8 +188,8 @@
     <string name="body_screen_shoot_done">Open app to see image</string>
     <string name="title_dowload_done">File loaded successfully!</string>
     <string name="body_dowload_done">Recently loaded file: </string>
-    <string name="title_out_done">Still working on your Document?</string>
-    <string name="body_out_done">Tap to continue where you left off.</string>
+    <string name="title_out_done">End the Day Right?</string>
+    <string name="body_out_done">Review today’s expenses, income, and your budget progress.</string>
     <string name="open_now">Open Now!</string>
     <string name="continued">Continue</string>
 </resources>

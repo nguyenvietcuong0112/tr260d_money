@@ -23,11 +23,14 @@ public class ActivityLoadNativeFullV2 extends AbsBaseActivity {
     public static final String NATIVE_FUll_AD_ID = "native_full_ad_id";
 
     private static ActivityFullCallback callback;
+    private CountDownTimer countDownTimer;
+    private boolean isCase2 = false;
+    private int count = 0;
 
     public static void open(Context context, String id, ActivityFullCallback cb) {
         callback = cb;
         Intent intent = new Intent(context, ActivityLoadNativeFullV2.class);
-        intent.putExtra(NATIVE_FUll_AD_ID,id);
+        intent.putExtra(NATIVE_FUll_AD_ID, id);
         context.startActivity(intent);
     }
 
@@ -41,7 +44,12 @@ public class ActivityLoadNativeFullV2 extends AbsBaseActivity {
         if (getIntent().hasExtra(NATIVE_FUll_AD_ID)) {
             adId = getIntent().getStringExtra(NATIVE_FUll_AD_ID);
         } else {
-            adId = getString(Integer.parseInt(""));
+            // Xử lý trường hợp không có ad ID - đóng activity
+            if (callback != null) {
+                callback.onResultFromActivityFull();
+            }
+            finish();
+            return;
         }
 
         loadNativeFull(adId);
@@ -66,28 +74,72 @@ public class ActivityLoadNativeFullV2 extends AbsBaseActivity {
                         .inflate(R.layout.layout_native_full_new, null);
                 ImageView closeButton = adView.findViewById(R.id.close);
                 MediaView mediaView = adView.findViewById(R.id.ad_media);
-                closeButton.setOnClickListener(v -> mediaView.performClick());
-                new CountDownTimer(5000, 1000) {
-                    public void onTick(long millisUntilFinished) {
 
-                    }
+                // Random 50-50 cho 2 trường hợp
+                isCase2 = Math.random() < 0.5; // true = trường hợp 2, false = trường hợp 1
 
-                    public void onFinish() {
-                        closeButton.setOnClickListener(v -> {
-                            if (callback != null) {
-                                callback.onResultFromActivityFull();
-                            }
-                            finish();
-                        });
-                    }
-                }.start();
+                if (isCase2) {
+                    // TRƯỜNG HỢP 2: Phải đợi 2 giây
+                    setupCase2CloseButton(closeButton, mediaView);
+                } else {
+                    // TRƯỜNG HỢP 1: Đóng ngay
+                    setupCase1CloseButton(closeButton);
+                }
+
                 binding.frAdsFull.removeAllViews();
                 binding.frAdsFull.addView(adView);
                 Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
             }
         });
     }
-    int count = 0;
+
+    // Trường hợp 1: Ẩn button, sau 2s hiện ra và đóng ngay
+    private void setupCase1CloseButton(ImageView closeButton) {
+        // Ẩn button ban đầu
+        closeButton.setVisibility(View.GONE);
+
+        countDownTimer = new CountDownTimer(2000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                // Đợi 2 giây
+            }
+
+            public void onFinish() {
+                // Sau 2 giây: hiện button và cho phép đóng ngay
+                closeButton.setVisibility(View.VISIBLE);
+                closeButton.setOnClickListener(v -> {
+                    if (callback != null) {
+                        callback.onResultFromActivityFull();
+                    }
+                    finish();
+                });
+            }
+        }.start();
+    }
+
+    // Trường hợp 2: Hiện button ngay, nhưng phải đợi 2s mới đóng được
+    private void setupCase2CloseButton(ImageView closeButton, MediaView mediaView) {
+        // Hiện button ngay từ đầu
+        closeButton.setVisibility(View.VISIBLE);
+
+        // Trong 2 giây đầu: click = click vào ad
+        closeButton.setOnClickListener(v -> mediaView.performClick());
+
+        countDownTimer = new CountDownTimer(2000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                // Đếm ngược 2 giây
+            }
+
+            public void onFinish() {
+                // Sau 2 giây: cho phép đóng thật
+                closeButton.setOnClickListener(v -> {
+                    if (callback != null) {
+                        callback.onResultFromActivityFull();
+                    }
+                    finish();
+                });
+            }
+        }.start();
+    }
 
     @Override
     protected void onResume() {
@@ -101,4 +153,15 @@ public class ActivityLoadNativeFullV2 extends AbsBaseActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Cancel timer để tránh memory leak
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+            countDownTimer = null;
+        }
+        // Clear callback để tránh memory leak
+        callback = null;
+    }
 }

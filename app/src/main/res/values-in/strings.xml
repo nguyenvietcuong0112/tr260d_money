@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Budget Planner - Save Money</string>
+    <string name="app_name">Smart Budget: Money Tracker</string>
 
     <string-array name="months">
         <item>January</item>
@@ -68,6 +68,47 @@
     <string name="privacy_policy">Kebijakan privasi</string>
     <string name="rating">Penilaian</string>
     <string name="please_add_transaction_first">Silakan tambahkan transaksi terlebih dahulu</string>
+
+    <string name="mexico">Meksiko(México)</string>
+    <string name="poland">Polandia (Polska)</string>
+    <string name="turkey">Turki (Türkiye)</string>
+    <string name="iraq">Irak (العراق)</string>
+    <string name="ukraine">Ukraina (Україна)</string>
+    <string name="argentina">Argentina (Argentina)</string>
+    <string name="kazakhstan">Kazakhstan (Қазақстан)</string>
+    <string name="arabic">Arab(العربية)</string>
+    <string name="french">Prancis(Français)</string>
+    <string name="germany">Jerman(Deutsch)</string>
+    <string name="hindi">Hindi(हिन्दी)</string>
+    <string name="indonesia">Indonesia(Bahasa Indonesia)</string>
+    <string name="thailand">Thailand(ภาษาไทย)</string>
+    <string name="philippines">Filipina(Filipino)</string>
+    <string name="nigeria">Nigeria(English)</string>
+    <string name="japan">Jepang(日本語 )</string>
+    <string name="korea">Korea(한국어)</string>
+    <string name="portuguese">Portugis(Português)</string>
+    <string name="russia">Rusia(Pусский)</string>
+    <string name="spanish">Spanyol(Español)</string>
+    <string name="urdu">Urdu(اُردُو)</string>
+    <string name="english">Inggris</string>
+    <string name="english_us">Inggris (AS)</string>
+    <string name="english_uk">Inggris (Inggris)</string>
+    <string name="english_canada">Inggris (Kanada)</string>
+    <string name="english_south_africa">Inggris (Afrika Selatan)</string>
+    <string name="bengali">Bengali (বাংলা)</string>
+    <string name="marathi">Marathi (मराठी)</string>
+    <string name="telugu">Telugu (తెలుగు)</string>
+    <string name="tamil">Tamil (தமிழ்)</string>
+    <string name="kannada">Kannada (ಕನ್ನಡ)</string>
+    <string name="odia">Odia (ଓଡ଼ିଆ)</string>
+    <string name="malayalam">Malayalam (മലയാളം)</string>
+    <string name="portuguese_brazil">Portugis (Brasil)</string>
+    <string name="portuguese_europeu">Portugis (Eropa)</string>
+    <string name="portuguese_angola">Portugis (Angola)</string>
+    <string name="portuguese_mozambique">Portugis (Mozambik)</string>
+    <string name="india">India (भारत)</string>
+
+    <string name="open">Buka</string>
 
 
 </resources>

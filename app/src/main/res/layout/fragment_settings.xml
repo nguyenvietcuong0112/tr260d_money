@@ -282,22 +282,5 @@
     </ScrollView>
 
 
-    <FrameLayout
-        android:id="@+id/fr_ads"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:background="@drawable/bg_ads_native"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <RelativeLayout
-            android:id="@+id/shimmer_native_language"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <include layout="@layout/ads_shimmer_native_no_media" />
-        </RelativeLayout>
-    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

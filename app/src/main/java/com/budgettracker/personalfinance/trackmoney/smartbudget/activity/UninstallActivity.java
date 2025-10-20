@@ -76,7 +76,6 @@ public class UninstallActivity extends BaseActivityAds {
     };
 
     private void loadAds() {
-        if (!SharePreferenceUtils.isOrganic(this)) {
             Admob.getInstance().loadNativeAd(this, getString(R.string.native_keep_user), new NativeCallback() {
                 @Override
                 public void onNativeAdLoaded(NativeAd nativeAd) {
@@ -94,7 +93,6 @@ public class UninstallActivity extends BaseActivityAds {
                     binding.frAds.setVisibility(View.GONE);
                 }
             });
-        }
     }
 
     private final String[] permissions2 = new String[]{

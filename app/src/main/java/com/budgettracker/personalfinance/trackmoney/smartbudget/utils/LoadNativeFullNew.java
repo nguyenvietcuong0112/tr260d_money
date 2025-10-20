@@ -74,7 +74,7 @@ public class LoadNativeFullNew extends BaseActivity {
 
                 mediaView.setOnClickListener(adClickListener);
 
-                countDownTimer = new CountDownTimer(5000, 1000) {
+                countDownTimer = new CountDownTimer(2000, 1000) {
                     public void onTick(long millisUntilFinished) {
                     }
 

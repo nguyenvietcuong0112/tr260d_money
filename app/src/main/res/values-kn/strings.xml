@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Budget Planner - Save Money</string>
+    <string name="app_name">Smart Budget: Money Tracker</string>
 
     <string-array name="months">
         <item>January</item>

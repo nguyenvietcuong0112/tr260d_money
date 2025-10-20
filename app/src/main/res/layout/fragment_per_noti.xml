@@ -52,7 +52,7 @@
             android:gravity="center"
             android:maxLines="2"
             android:ellipsize="end"
-            android:text="Turn on notifications to get real-time alerts on currency rate changes."
+            android:text="Turn on notifications to stay updated."
             android:textColor="#7E7E7E"
             android:textSize="14sp" />
     </LinearLayout>

@@ -66,7 +66,7 @@ public class AddTransactionActivity extends AppCompatActivity {
     private int colorActive, colorInactive;
     private ImageView ivExpend, ivIncome, ivLoan, tvCancel;
 
-    private View indicator_expense, indicator_income;
+    private View indicator_expense, indicator_income,indicator_loan;
 
     private LinearLayout tvSave;
     private TextView tvExpendLabel, tvIncomeLabel, tvLoanLabel;
@@ -89,7 +89,6 @@ public class AddTransactionActivity extends AppCompatActivity {
     private View categoryView;
     private TextView tvSelectedCategory;
     private ImageView ivSelectedCategoryIcon;
-    private FrameLayout frAdsBanner;
 
 
     @Override
@@ -123,7 +122,6 @@ public class AddTransactionActivity extends AppCompatActivity {
         }
         loadPreviousData();
         loadAds();
-        loadAdsBanner();
 
     }
 
@@ -221,7 +219,6 @@ public class AddTransactionActivity extends AppCompatActivity {
 //        rvCategories = findViewById(R.id.rv_categories);
         layoutLender = findViewById(R.id.layout_lender);
         layoutBudget = findViewById(R.id.layout_budget);
-        frAdsBanner = findViewById(R.id.fr_ads_banner);
 
         categoryView = findViewById(R.id.category_view);
         tvSelectedCategory = findViewById(R.id.tv_selected_category);
@@ -242,6 +239,7 @@ public class AddTransactionActivity extends AppCompatActivity {
 
         indicator_expense = findViewById(R.id.indicator_expense);
         indicator_income = findViewById(R.id.indicator_income);
+        indicator_loan = findViewById(R.id.indicator_loan);
 
 
         colorActive = getResources().getColor(android.R.color.black);
@@ -260,14 +258,14 @@ public class AddTransactionActivity extends AppCompatActivity {
     }
 
     private void loadAds() {
-        if(!SharePreferenceUtils.isOrganic(this)) {
-            Admob.getInstance().loadNativeAd(this, getString(R.string.native_add_transaction), new NativeCallback() {
+        if (Admob.getInstance().isLoadFullAds()) {
+            Admob.getInstance().loadNativeAd(this, getString(R.string.native_all), new NativeCallback() {
                 @Override
                 public void onNativeAdLoaded(NativeAd nativeAd) {
                     super.onNativeAdLoaded(nativeAd);
                     NativeAdView adView;
                     adView = (NativeAdView) LayoutInflater.from(AddTransactionActivity.this)
-                            .inflate(R.layout.layout_native_introthree_non_organic, null);
+                            .inflate(R.layout.layout_native_language, null);
                     frAds.removeAllViews();
                     frAds.addView(adView);
                     Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
@@ -284,29 +282,6 @@ public class AddTransactionActivity extends AppCompatActivity {
             frAds.removeAllViews();
 
         }
-
-
-    }
-
-    private void loadAdsBanner() {
-
-        Admob.getInstance().loadNativeAd(this, getString(R.string.native_banner_add_transaction), new NativeCallback() {
-            @Override
-            public void onNativeAdLoaded(NativeAd nativeAd) {
-                super.onNativeAdLoaded(nativeAd);
-                NativeAdView adView = (NativeAdView) LayoutInflater.from(AddTransactionActivity.this).inflate(R.layout.ad_native_admob_banner_1, null);
-                frAdsBanner.setVisibility(View.VISIBLE);
-                frAdsBanner.removeAllViews();
-                frAdsBanner.addView(adView);
-                Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-            }
-
-            @Override
-            public void onAdFailedToLoad() {
-                super.onAdFailedToLoad();
-                frAdsBanner.setVisibility(View.GONE);
-            }
-        });
 
 
     }
@@ -397,6 +372,7 @@ public class AddTransactionActivity extends AppCompatActivity {
 
         indicator_expense.setVisibility(currentTransactionType.equals("Expense") ? colorActive : colorInactive);
         indicator_income.setVisibility(currentTransactionType.equals("Income") ? colorActive : colorInactive);
+        indicator_loan.setVisibility(currentTransactionType.equals("Loan") ? colorActive : colorInactive);
 
         ivIncome.setColorFilter(currentTransactionType.equals("Income") ? colorActive : colorInactive);
         tvIncomeLabel.setTextColor(currentTransactionType.equals("Income") ? colorActive : colorInactive);
@@ -407,9 +383,10 @@ public class AddTransactionActivity extends AppCompatActivity {
 
     private void setupListeners() {
         tvCancel.setOnClickListener(view -> onBackPressed());
+        tvSave.setEnabled(false);
         tvSave.setOnClickListener(view -> {
 
-            if (!SharePreferenceUtils.isOrganic(AddTransactionActivity.this)) {
+            if (Admob.getInstance().isLoadFullAds()) {
                 Admob.getInstance().loadAndShowInter(AddTransactionActivity.this, getString(R.string.inter_save), 0, 30000, new InterCallback() {
 
                     @Override
@@ -696,5 +673,9 @@ public class AddTransactionActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        tvSave.setEnabled(true);
+    }
 }

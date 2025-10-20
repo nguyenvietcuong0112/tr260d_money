@@ -6,6 +6,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.budgettracker.personalfinance.trackmoney.smartbudget.utils.BudgetManager;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
 import com.mallegan.ads.callback.NativeCallback;
@@ -70,7 +71,11 @@ public class CurrencyUnitActivity extends AbsBaseActivity {
                 setResult(RESULT_OK, resultIntent);
                 finish();
             } else {
-                startActivity(new Intent(CurrencyUnitActivity.this, MainActivity.class));
+                BudgetManager budgetManager = new BudgetManager(this);
+                if (budgetManager.getTotalBudget() == 0) {
+                    Intent intent = new Intent(this, SetBudgetActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         loadAds();
@@ -78,29 +83,36 @@ public class CurrencyUnitActivity extends AbsBaseActivity {
 
 
     private void loadAds() {
-        Admob.getInstance().loadNativeAd(this, getString(R.string.native_currency), new NativeCallback() {
-            @Override
-            public void onNativeAdLoaded(NativeAd nativeAd) {
-                super.onNativeAdLoaded(nativeAd);
-                NativeAdView adView;
-                if (SharePreferenceUtils.isOrganic(CurrencyUnitActivity.this)) {
-                    adView = (NativeAdView) LayoutInflater.from(CurrencyUnitActivity.this)
-                            .inflate(R.layout.layout_native_language, null);
-                } else {
-                    adView = (NativeAdView) LayoutInflater.from(CurrencyUnitActivity.this)
-                            .inflate(R.layout.layout_native_language_non_organic, null);
+        if (Admob.getInstance().isLoadFullAds()) {
+            Admob.getInstance().loadNativeAd(this, getString(R.string.native_currency), new NativeCallback() {
+                @Override
+                public void onNativeAdLoaded(NativeAd nativeAd) {
+                    super.onNativeAdLoaded(nativeAd);
+                    NativeAdView adView;
+                    if (Admob.getInstance().isLoadFullAds()) {
+                        adView = (NativeAdView) LayoutInflater.from(CurrencyUnitActivity.this)
+                                .inflate(R.layout.layout_native_language, null);
+                    } else {
+                        adView = (NativeAdView) LayoutInflater.from(CurrencyUnitActivity.this)
+                                .inflate(R.layout.layout_native_language_non_organic, null);
+                    }
+                    binding.frAds.removeAllViews();
+                    binding.frAds.addView(adView);
+                    Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
                 }
-                binding.frAds.removeAllViews();
-                binding.frAds.addView(adView);
-                Admob.getInstance().pushAdsToViewCustom(nativeAd, adView);
-            }
 
-            @Override
-            public void onAdFailedToLoad() {
-                super.onAdFailedToLoad();
-                binding.frAds.setVisibility(View.GONE);
-            }
-        });
+                @Override
+                public void onAdFailedToLoad() {
+                    super.onAdFailedToLoad();
+                    binding.frAds.setVisibility(View.GONE);
+                }
+            });
+        } else {
+            binding.frAds.removeAllViews();
+            binding.frAds.setVisibility(View.GONE);
+
+        }
+
 
 
     }
