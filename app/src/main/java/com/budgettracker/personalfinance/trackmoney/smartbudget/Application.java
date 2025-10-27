@@ -114,18 +114,17 @@ import android.content.pm.ShortcutManager;
 import android.graphics.drawable.Icon;
 import android.os.Build;
 
-import com.appsflyer.AppsFlyerConversionListener;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.ads.ActivityLoadNativeFullV5;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.notiSpecial.AppInstallReceiver;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.notiSpecial.ProDocsSplashNotiActivity;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.notiSpecial.UserPresentReceiver;
 import com.facebook.FacebookSdk;
 import com.google.firebase.FirebaseApp;
+import com.mallegan.ads.util.Admob;
 import com.mallegan.ads.util.AdsApplication;
 import com.mallegan.ads.util.AppOpenManager;
 import com.mallegan.ads.util.AppsFlyer;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.utils.AppActivityTracker;
-import com.budgettracker.personalfinance.trackmoney.smartbudget.utils.SharePreferenceUtils;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.activity.IntroActivity;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.activity.LanguageActivity;
 import com.budgettracker.personalfinance.trackmoney.smartbudget.activity.SplashActivity;
@@ -133,7 +132,6 @@ import com.budgettracker.personalfinance.trackmoney.smartbudget.activity.SplashA
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class Application extends AdsApplication {
 
@@ -197,8 +195,6 @@ public class Application extends AdsApplication {
 
         FacebookSdk.setClientToken(getString(R.string.facebook_client_token));
         AppsFlyer.getInstance().initAppFlyer(this, getString(R.string.AF_DEV_KEY), true);
-
-
 
 //        if (!SharePreferenceUtils.isOrganic(getApplicationContext())) {
 //            AppsFlyer.getInstance().initAppFlyer(this, getString(R.string.AF_DEV_KEY), true);

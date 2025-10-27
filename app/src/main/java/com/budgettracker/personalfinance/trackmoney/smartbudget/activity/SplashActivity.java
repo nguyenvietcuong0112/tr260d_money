@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Process;
+import android.util.Log;
 
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
@@ -111,20 +112,6 @@ public class SplashActivity extends BaseActivity {
         startFakeProgressLoading();
         Uri uri = getIntent().getData();
         interCallback = new InterCallback() {
-            @Override
-            public void onNextAction() {
-                super.onNextAction();
-                if (uri != null) {
-                    File file = null;
-                    try {
-                        file = SystemUtil.fileFromContentUri(getBaseContext(), uri);
-                        SharedClass.filePath = file.getPath();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                openApp();
-            }
 
             @Override
             public void onAdClosedByUser() {
@@ -136,8 +123,18 @@ public class SplashActivity extends BaseActivity {
                 } else {
                     openApp();
                 }
+            }
 
-
+            @Override
+            public void onAdFailedToLoad(LoadAdError i) {
+                super.onAdFailedToLoad(i);
+                if (Admob.getInstance().isLoadFullAds()) {
+                    ActivityLoadNativeFullV5.open(SplashActivity.this, getString(R.string.native_full_splash_high), getString(R.string.native_full_splash), () -> {
+                        openApp();
+                    });
+                } else {
+                    openApp();
+                }
             }
         };
         ConsentHelper consentHelper = ConsentHelper.getInstance(this);

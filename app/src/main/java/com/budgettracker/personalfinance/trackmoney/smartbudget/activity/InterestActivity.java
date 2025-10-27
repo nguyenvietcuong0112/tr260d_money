@@ -34,31 +34,7 @@ public class InterestActivity  extends BaseActivity {
         SystemConfiguration.setStatusBarColor(this, R.color.transparent, SystemConfiguration.IconColor.ICON_DARK);
         binding = ActivityInterestBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        if (!Admob.getInstance().isLoadFullAds()) {
-            AppsFlyerLib.getInstance().registerConversionListener(this, new AppsFlyerConversionListener() {
 
-                @Override
-                public void onConversionDataSuccess(Map<String, Object> conversionData) {
-                    String mediaSource = (String) conversionData.get("media_source");
-                    SharePreferenceUtils.setOrganicValue(getApplicationContext(), mediaSource == null || mediaSource.isEmpty() || mediaSource.equals("organic"));
-                }
-
-                @Override
-                public void onConversionDataFail(String s) {
-                    // Handle conversion data failure
-                }
-
-                @Override
-                public void onAppOpenAttribution(Map<String, String> map) {
-                    // Handle app open attribution
-                }
-
-                @Override
-                public void onAttributionFailure(String s) {
-                    // Handle attribution failure
-                }
-            });
-        }
         initializeCheckboxes();
         setupListeners();
 
